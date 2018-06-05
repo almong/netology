@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Знакомство с CSS</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.alter-paragraph {color: #999999;}
+		p {color: #999999;}
+		h2 {font-style: italic;}
+		h3 {color: #0088CC;}
+	</style>
+</head>
+<body>
+	<h1 class="header" style="background: #f2f2f2;">Знакомство с CSS</h1>
+	<h2 class="header-tasks">Задачи</h2>
+	<ol>
+		<li>Подключите normalize.css с помощью тега import в окне для редактирования CSS. Файл находится  <a href="https://netology-code.github.io/html-homeworks/css/resourses/normalize.css">по ссылке</a>.</li>
+		<li>Раскрасьте заголовок первого уровня «Знакомство с CSS» с помощью атрибута style="background: #f2f2f2";</li>
+		<li>Создайте тег style в шапке сайта и измените цвет шрифта .alter-paragraph {color: #999999};</li>
+		<li>Создайте три CSS-правила в теге style:
+			<ul>
+				<li>Для абзацев со свойством color: #999999;</li>
+				<li>Заголовков 2 уровня font-style: italic;</li>
+				<li>Заголовков 3 уровня color: #0088CC;</li>
+			</ul>
+		</li>
+		<li>Добавьте в CSS стили для абзацев margin: 0 15px</li>
+		<li>Добавьте в CSS для абзацев c классом .cascade-paragraph стили background: #99FF99;</li>
+		<li>Сделайте вложенный список третьего уровня красным только с помощью CSS без редактирования HTML;</li>
+		<li>Измените основной цвет шрифта на странице на color: #404040;</li>
+		<li>Измените цвет шрифта для ненумерованных списков на странице на color: #000000;</li>
+		<li>Найдите в документации как можно сделать абзацы «как в классических книгах»:
+			<ul>
+				<li> Первая буква больше остальных;</li>
+				<li> Отступ первой строчки в абзаце от левого края больше чем у остальных строк в абзаце.</li>
+			</ul>
+		</li>
+		<li>Сделайте у абзацев отступ первой строки 25px и первую букву color: #f00 и font-size: 25px;</li>
+	</ol>
+	<p>Fratrum sunt crescendo quin legebantur ab vis. Posset: erat septemque
+	  umentia imagine rerum utramque cinxit? Numero tellus passim levius. Zephyro
+	  melior longo otia aera. <b><i>Subdita</i></b> evolvit limitibus. Quisquis regio qui zonae
+	  oppida pendebat deerat congeriem conversa iners!
+	  <a href="#">Fratrum sunt crescendo quin legebantur ab vis.</a>
+	</p>
+
+	<p class="alter-paragraph">
+	Posset: erat septemque
+	  umentia imagine rerum utramque cinxit? Numero tellus passim levius. Zephyro
+	  melior longo otia aera. Subdita evolvit limitibus. Quisquis regio qui zonae
+	  oppida pendebat deerat congeriem conversa iners!</p>
+	<p class="cascade-paragraph">Fratrum sunt crescendo quin legebantur ab vis. Posset: erat septemque
+	  umentia imagine rerum utramque cinxit? Numero tellus passim levius. Zephyro
+	  melior longo otia aera. Subdita evolvit limitibus. Quisquis regio qui zonae
+	  oppida pendebat deerat congeriem conversa iners!</p>
+	<p>Fratrum sunt crescendo quin legebantur ab vis. Posset: erat septemque
+	  umentia imagine rerum utramque cinxit? Numero tellus passim levius. Zephyro
+	  melior longo otia aera. Subdita evolvit limitibus. Quisquis regio qui zonae
+	  oppida pendebat deerat congeriem conversa iners!</p>
+	<p>Fratrum sunt crescendo quin legebantur ab vis. Posset: erat septemque
+	  umentia imagine rerum utramque cinxit? Numero tellus passim levius. Zephyro
+	  melior longo otia aera. Subdita evolvit limitibus. Quisquis regio qui zonae
+	  oppida pendebat deerat congeriem conversa iners!</p>
+
+	<h3>Sublime naturae vis uno animalia</h3>
+	<h4>Auroram emicuit undae meis bracchia</h4>
+	<p class="alter-paragraph">Erant undas. Fratrum ultima quoque fossae. Sinistra uno satus fecit habendum
+	  sorbentur horrifer contraria fert. Habentem magni stagna. Origo proxima
+	  quae. Terra stagna pondus traxit ipsa hunc mea fuerant! Media septemque
+	  habendum declivia.</p>
+	<ul>
+	  <li>Mentisque mortales mundo quin fuerat illi flamina onus unda postquam habentia
+	    pondere aeris reparabat indigestaque</li>
+	  <li>Caecoque discordia tepescunt cesserunt ulla deus subsidere meis habentem
+	    sorbentur horrifer spisso semine terrae pronaque inclusum frigore pulsant
+	    sic sunt hominum astra
+		<ul>
+		  <li>Mentisque mortales mundo quin fuerat illi flamina onus unda postquam habentia
+		    pondere aeris reparabat indigestaque</li>
+		  <li>Caecoque discordia tepescunt cesserunt ulla deus subsidere meis habentem
+		    sorbentur horrifer spisso semine terrae pronaque inclusum frigore pulsant
+		    sic sunt hominum astra</li>
+		  <li>Tenent pondus alto non corpore litora vos quarum aliis ponderibus descenderat
+		    diversa rectumque os nitidis tumescere vis sinistra</li>
+		  <li>Cura tractu eodem ita habentem norant dixere animalibus descenderat aliis
+		    tegit quarum densior vindice caelo motura glomeravit crescendo vesper seductaque
+		    tellure retinebat convexi
+		    	<ul>
+				  <li>Mentisque mortales mundo quin fuerat illi flamina onus unda postquam habentia
+				    pondere aeris reparabat indigestaque</li>
+				  <li>Caecoque discordia tepescunt cesserunt ulla deus subsidere meis habentem
+				    sorbentur horrifer spisso semine terrae pronaque inclusum frigore pulsant
+				    sic sunt hominum astra</li>
+				  <li>Tenent pondus alto non corpore litora vos quarum aliis ponderibus descenderat
+				    diversa rectumque os nitidis tumescere vis sinistra</li>
+				  <li>Cura tractu eodem ita habentem norant dixere animalibus descenderat aliis
+				    tegit quarum densior vindice caelo motura glomeravit crescendo vesper seductaque
+				    tellure retinebat convexi</li>
+					</ul>
+				</li>
+		</ul>
+	  </li>
+	  <li>Tenent pondus alto non corpore litora vos quarum aliis ponderibus descenderat
+	    diversa rectumque os nitidis tumescere vis sinistra</li>
+	  <li>Cura tractu eodem ita habentem norant dixere animalibus descenderat aliis
+	    tegit quarum densior vindice caelo motura glomeravit crescendo vesper seductaque
+	    tellure retinebat convexi</li>
+	</ul>
+	<p>Fecit melioris speciem inclusum umor iussit glomeravit sunt. Omnia quisque
+	  alta rerum galeae terris nec tuba. Sui caesa qui ponderibus moles frigida
+	  origine mixtam tum. Cinxit locavit ubi usu di fossae fuit.</p>
+	<ol>
+	  <li>Rectumque flamma aer securae agitabilis locis modo moles tellure recens
+	    haec dissociata diversa</li>
+	  <li>Corpora aequalis radiis praeter praebebat contraria dissaepserat frigida
+	    fontes terrae temperiemque igni circumfuso ne tegi sole non moderantum
+	    ignotas ita persidaque descenderat ut iuga</li>
+	  <li>Piscibus retinebat adhuc pontus omnia pronaque formas rapidisque fronde
+	    vix oppida</li>
+	  <li>Montibus caeli habentem indigestaque norant circumdare mixta nam cesserunt
+	    unus norant ante aethere sive figuras congestaque pace matutinis mentisque
+	    aeris</li>
+	  <li>Tanto acervo terrenae naturae premuntur neu innabilis aquae numero nulli
+	    campoque diversa chaos:</li>
+	</ol>
+	<p>Ab orbis galeae plagae formaeque modo caelum quia. Fulgura nullo! Habitabilis
+	  iudicis adspirate astra pressa tonitrua mundi fert. Titan capacius finxit
+	  et sponte. Levitate fabricator deorum aer satus cuncta dedit alta solum
+	  cognati.</p>
+</body>
+</html>

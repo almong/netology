@@ -1,0 +1,48 @@
+@import "https://netology-code.github.io/html-homeworks/css/resourses/normalize.css";
+body {
+  color: #404040;
+	padding:20px;
+	margin:20px;
+	}
+  h1 {
+
+  }
+  h2 {
+  	font-style: italic;
+  }
+
+  blockquote {
+
+  }
+  ol {
+  	border:1px solid #ccc;
+  	padding:20px 50px;
+  }
+  li {
+  	font-size: 17px;
+  }
+
+  a {
+  	font-size: 14px;
+
+  }
+  p {
+    margin: 0 15px;
+    text-indent: 25px;
+  }
+
+  p.cascade-paragraph {
+    background: #99FF99;
+  }
+
+  ul ul ul {
+    color: red;
+  }
+
+  ul {
+    color: #000000;
+  }
+  p:first-letter {
+    color: #f00;
+    font-size: 25px;
+  }
