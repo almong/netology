@@ -1,0 +1,13 @@
+article{
+  width: 602px;
+}
+table {
+  border-collapse: collapse;
+  }
+td {
+  border: 1px solid black;
+  padding: 5px;
+}
+.list-style {
+  list-style-image: url(example/mark.jpg);
+}
