@@ -1,0 +1,48 @@
+/* Стили ниже трогать не нужно */
+	.content {
+		width: 600px;
+		padding: 0 30px 30px 30px;
+		border: 3px solid;
+	}
+
+	.element {
+		border: 2px solid red;
+		height: 150px;
+		margin-top: 30px;
+	}
+
+	.element:nth-child(2) {
+		height: 200px;
+	}
+
+	.element:nth-child(3) {
+		height: 250px;
+	}
+
+
+/* Ваше решение задания №1 */
+  .element {
+
+  }
+
+/* Ваше решение задания №2 */
+  .parent {
+
+  }
+
+  ul {
+
+  }
+
+  li {
+
+  }
+
+/* Ваше решение задания №3 */
+  .p2 {
+
+  }
+
+  .p4 {
+
+  }
