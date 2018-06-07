@@ -24,7 +24,7 @@
   .element {
     width: 100px;
     display: inline-block;
-    display:
+		vertical-align: middle;
   }
 
 /* Ваше решение задания №2 */
