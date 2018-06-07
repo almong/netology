@@ -22,27 +22,34 @@
 
 /* Ваше решение задания №1 */
   .element {
-
+    width: 100px;
+    display: inline-block;
+    display:
   }
 
 /* Ваше решение задания №2 */
   .parent {
-
+    padding-top: 20px;
   }
 
   ul {
+    display: table-row;
 
   }
 
   li {
+    display: table-cell;
+    border: 1px solid;
+    padding: 5px;
+
 
   }
 
 /* Ваше решение задания №3 */
   .p2 {
-
+    display: none;
   }
 
   .p4 {
-
+    display: none;
   }
