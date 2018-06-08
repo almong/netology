@@ -29,6 +29,7 @@
 
 /* Ваше решение задания №2 */
   .parent {
+		display: table;
     padding-top: 20px;
   }
 

@@ -1,0 +1,174 @@
+/* цвета, которые лучше использовать:
+#e14313 - красно-оранжевый
+#0e1e11 - темно-коричневый
+#bbc9b8 - серый
+#feda08 - желтый
+#f7eac7 - молочный
+#04456d - синий
+*/
+.canvas {
+
+}
+.info {
+
+}
+
+.block0 {
+  display: inline-block;
+
+}
+.block01 {
+  display: block;
+  width: 183px;
+  height: 33px;
+  background-color: #e14313;
+}
+.block02 {
+  display: block;
+  width: 183px;
+  height: 11px;
+  background-color: #0e1e11;
+}
+.block03 {
+  display: block;
+  width: 183px;
+  height: 197px;
+  background-color: #e14313;
+}
+.block1 {
+  display: inline;
+  position: absolute;
+  z-index: +1;
+  width: 11px;
+  height: 239px;
+  margin-top: 2px;
+  background-color: #0e1e11;
+}
+.block2 {
+  position: relative;
+  display: inline-block;
+  background-color: #bbc9b8;
+  width: 147px;
+  height: 241px;
+}
+.block3 {
+  position: absolute;
+  display: inline-block;
+  z-index: +1;
+  width: 11px;
+  height: 236px;
+  margin-top: 5px;
+  margin-left: -8px;
+  background-color: #0e1e11;
+}
+.block4 {
+  display: inline-block;
+  width: 60px;
+  height: 241px;
+  background-color: #feda08;
+}
+.block5 {
+  display: block;
+  background-color: #0e1e11;
+  width: 183px;
+  height: 11px;
+}
+.block6 {
+  display: inline-block;
+}
+.block61 {
+  display: inline-block;
+  width: 30px;
+  height: 197px;
+  background-color: #f7eac7;
+}
+.block62 {
+  display: inline-block;
+  width: 11px;
+  height: 197px;
+  background-color: #0e1e11;
+}
+.block63 {
+  display: inline-block;
+  width: 142px;
+  height: 197px;
+  background-color: #f7eac7;
+}
+.block64 {
+  display: block;
+  width: 181px;
+  height: 11px;
+  margin-left: 2px;
+  background-color: #0e1e11;
+}
+.block65 {
+  display: block;
+  width: 183px;
+  height: 32px;
+  margin-top: -11px;
+  background-color: #f7eac7;
+  position: relative;
+  z-index: -1;
+
+}
+.block7 {
+  display: inline-block;
+  margin-top: -11px;
+  background-color: #0e1e11;
+  z-index: +1;
+  position: relative;
+  width: 11px;
+  height: 231px;
+}
+.block8 {
+  display: inline-block;
+}
+.block81 {
+  display: block;
+  margin-top: -11px;
+  background-color: #0e1e11;
+  width: 196px;
+  height: 11px;
+}
+.block82 {
+  display: inline-block;
+  width: 128px;
+  height: 150px;
+  position: absolute;
+  z-index: +1;
+  background-color: #f7eac7;
+}
+.block83 {
+  display: block;
+  z-index: 0;
+  width: 196px;
+  height: 158px;
+  background-color: #0e1e11;
+}
+.block84 {
+  display: inline-block;
+  width: 207px;
+  height: 71px;
+  margin-left: -11px;
+  z-index: 0;
+  position: relative;
+  background-color: #04456d;
+}
+
+
+/* Стили ниже трогать не нужно!! */
+div[class^="block"] {
+  vertical-align: top;
+  background-image: url("http://www.thedesignwork.com/wp-content/uploads/2012/07/paper-texture-14.jpg");
+/* запасная ссылка url("http://s018.radikal.ru/i507/1709/78/c1d4c11d0938.jpg"); */
+  background-blend-mode: multiply;
+}
+div.block0,
+div.block6,
+div.block8 {
+  background-image: none;
+}
+.canvas,
+.info {
+  vertical-align: top;
+}
