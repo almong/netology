@@ -72,6 +72,37 @@
 }
 
 /* Пишите ваш код ниже */
-.calendar-days li:nth-child(6n+8) {
-  color: red;
+.calendar-days li:nth-child(7n+5)+li,
+.calendar-days li:nth-child(7n+6)+li {
+  background-color: red;
+}
+
+.block:nth-child(n+8)~div {
+	display: none;
+}
+
+.customed-list {
+	list-style: none;
+	margin-left: -1em;
+}
+
+.customed-list li:nth-child(even)::before {
+	content: "\0040";
+  margin-right: 0.5em;
+}
+.customed-list li:nth-child(odd)::before {
+	content: "\2605";
+	margin-right: 0.5em;
+}
+
+.customed-list li:nth-last-child(n+2) {
+	margin-bottom: 20px;
+}
+
+.menu li:first-child:nth-last-child(4)~li {
+	margin-left: 30px;
+}
+
+.menu li:first-child:nth-last-child(n+5)~li {
+	margin-left: 10px;
 }
