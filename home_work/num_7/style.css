@@ -99,7 +99,7 @@
 	margin-bottom: 20px;
 }
 
-.menu li:first-child:nth-last-child(4)~li {
+.menu li:first-child:nth-last-child(-n+4)~li {
 	margin-left: 30px;
 }
 
