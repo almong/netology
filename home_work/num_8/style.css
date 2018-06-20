@@ -1,0 +1,181 @@
+html {
+  font-family: helvetica, sans-serif;
+  font-size: 62.5%;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  position: relative;
+  padding: 30px 40px;
+}
+
+.notice {
+  font-style: italic;
+  font-size: 1.4em;
+  line-height: 1.2;
+}
+
+.ex1 {
+  margin-bottom: 50px;
+  font-size: 1.2em;
+}
+
+.ex1 header {
+  font-size: 1.5em;
+}
+
+.ex1 header h1 {
+  font-size: 4rem;
+}
+
+.ex header span {
+  font-size: 2em;
+}
+.ex header .marked {
+  font-size: 15px;
+}
+
+.ex1 article {
+  font-size: 20px;
+}
+
+.ex1 article strong {
+  font-size: 66.667%;
+}
+
+.ex1 article p {
+  font-size: 125%;
+}
+
+.ex1 article > p {
+  font-size: 80%;
+}
+.ex1 article .marked {
+  font-size: 250%;
+}
+
+.ex1 article blockquote {
+  font-size: 0.5em;
+}
+
+.ex1 .footer {
+  font-size: 20px;
+}
+
+.ex1 footer {
+  font-size: 16px;
+}
+
+.ex1 footer blockquote {
+  font-size: 1.5em;
+}
+
+.ex1 footer p {
+  font-size: 50%;
+}
+/* Ваше решение задания №1 */
+.ex1 header h1 strong {
+  font-size: 0.5em;
+}
+
+.ex1 article strong {
+  font-size: 125%;
+}
+
+.ex1 article blockquote  p strong{
+  font-size: 1.6em;
+}
+
+.ex1 .marked strong{
+  font-size: 0.8em;
+}
+
+.ex1 footer strong{
+  font-size: 2.5em;
+}
+
+.ex2 {
+  font-size: 16px;
+  line-height: 1.2;
+  margin-bottom: 50px;
+}
+/* Ваше решение задания №2 */
+.ex2 strong {
+  font-weight: normal;
+}
+
+.ex2 em {
+  font-style: normal;
+}
+
+.ex2 code, .ex2 kbd {
+  font-family: helvetica, sans-serif;
+}
+
+.ex2 i {
+  font-style: normal;
+}
+
+.ex2 mark {
+  background-color: #ffffff;
+}
+
+.ex2 big, .ex2 small {
+  font-size: 1em;
+}
+.ex2 abbr, .ex2 u {
+  text-decoration: none;
+}
+
+
+.ex3 {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border: 2px solid #000;
+  margin-bottom: 50px;
+}
+
+/* Ваше решение задания №3 */
+.ex3 {
+  background-color: #D3D3D3;
+  border-style: dotted;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/ThreeCirclesPlain.svg/200px-ThreeCirclesPlain.svg.png);
+  background-repeat: no-repeat;
+  background-position: 100% 50%
+}
+
+.ex4 {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border: 4px solid #000000;
+  margin-bottom: 50px;
+}
+/* Ваше решение задания №4 */
+.ex4 {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/ThreeCirclesPlain.svg/200px-ThreeCirclesPlain.svg.png);
+  background-size:cover;
+  background-position: 50% 50%
+}
+
+
+
+.ex5 {
+  font-size: 1.6em;
+  line-height: 1.2;
+  margin-bottom: 50px;
+}
+/* Ваше решение задания №5 */
+
+
+
+.ex6 {
+  font-size: 1.6em;
+  line-height: 1.2;
+  margin-bottom: 50px;
+}
+/* Ваше решение задания №6 */
