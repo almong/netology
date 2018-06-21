@@ -101,6 +101,10 @@ html {
   margin-bottom: 50px;
 }
 /* Ваше решение задания №2 */
+.ex2 a {
+  color: #000000;
+}
+
 .ex2 strong {
   font-weight: normal;
 }
@@ -124,7 +128,7 @@ html {
 .ex2 big, .ex2 small {
   font-size: 1em;
 }
-.ex2 abbr, .ex2 u {
+.ex2 abbr, .ex2 u, .ex2 a {
   text-decoration: none;
 }
 
@@ -157,12 +161,12 @@ html {
 }
 /* Ваше решение задания №4 */
 .ex4 {
+  outline:  3px solid #FF0000;
+  outline-offset: -12px;
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/ThreeCirclesPlain.svg/200px-ThreeCirclesPlain.svg.png);
-  background-size:cover;
+  background-size: cover;
   background-position: 50% 50%
-}
-
-
+  }
 
 .ex5 {
   font-size: 1.6em;
@@ -170,8 +174,24 @@ html {
   margin-bottom: 50px;
 }
 /* Ваше решение задания №5 */
+.ex5 .list1 {
+  list-style: upper-roman;
+}
 
+.ex5 .list2{
+  list-style-type: none;
+  counter-reset: item;
+  padding-left: 40px;
+ }
 
+.ex5 .list2 li::before {
+  content: counter(item) ') ';
+  counter-increment: item;
+}
+
+.ex5 .list2 li {
+  text-indent: -1.2em;
+}
 
 .ex6 {
   font-size: 1.6em;
@@ -179,3 +199,22 @@ html {
   margin-bottom: 50px;
 }
 /* Ваше решение задания №6 */
+.ex6 .list1 {
+  list-style: square;
+}
+
+.ex6 .list2{
+  list-style-type: none;
+  counter-reset: item;
+  padding-left: 40px;
+}
+
+.ex6 .list2 li::before {
+  content: "\2605";
+  margin-right: 0.3em;
+
+}
+
+.ex6 .list2 li {
+  text-indent: -1.2em;
+}
