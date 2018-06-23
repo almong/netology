@@ -81,10 +81,25 @@ section:first-of-type {
 }
 
 /* Ваше решение дополнительного задания */
-.fourth-left {
-  width: 250px;
+.fourth-parent {
+  position: relative;
+  min-width: 254px;
+  overflow: hidden;
+}
+.fourth-parent div {
+  display: inline-block;
   float: left;
 }
+
+.fourth-left {
+  width: 250px;
+}
+
+.fourth-right {
+  width: calc(100% - 258px);
+  position: absolute;
+}
+
 .fourth-parent::after {
   content: "";
   display: block;
