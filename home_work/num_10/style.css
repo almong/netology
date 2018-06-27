@@ -21,13 +21,12 @@ header {
   z-index: 1;
 }
 
-
 .logo_menu_center {
   position: relative;
   border-bottom: 1px solid #505369;
   max-width: 1168px;
   margin: auto;
-  padding: 40px 10px 40px;
+  padding: 30px 10px 30px;
 }
 
 .logo {
@@ -37,14 +36,25 @@ header {
   text-transform: uppercase;
 }
 
+.logo .active {
+  font-weight: 900;
+  color: #66697E;
+}
+
+.logo .box {
+  margin-left: -3px;
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
 .menu {
   width: 80%;
   position: absolute;
   display: inline-block;
+  font-size: 12px;
   right: 0;
   margin-right: 10px;
   text-align: right;
-
 }
 
 a {
@@ -63,7 +73,7 @@ a:hover {
 nav div {
   display: inline-block;
   margin-left: 20px;
-
+  margin-top: 5px;
 }
 
 .content {
@@ -106,8 +116,7 @@ nav div {
 }
 
 .center {
-  display: inline-block;
-  position: relative;
+  padding-top: 10px;
   max-width: 1168px;
   margin: auto;
   text-align: center;
@@ -121,8 +130,91 @@ nav div {
 .icon {
   width: 70px;
   height: 70px;
-  background-image: url("images/icon1.png");
+  background: url("images/icon1.png");
   background-size: contain;
   margin: auto;
+}
 
+.galery {
+  font-size: 0px;
+  text-align: center;
+}
+
+.photo {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+}
+
+.galery img {
+  width: 100%;
+}
+
+.footer_0 {
+  background-color: #3A3E64;
+}
+
+.footer_1 {
+  color: #81849B;
+  padding-top: 10px;
+  max-width: 1168px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer_1 > div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 33%;
+
+}
+.sn {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: 2px solid #FFFFFF;
+}
+
+.sn:hover {
+  background-color: #313454;
+}
+
+.sn a {
+  display: block;
+  height: 100%;
+  padding-top: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.copyright_0 {
+  background-color: #313454;
+}
+
+.copyright {
+  color: #81849B;
+  text-align: center;
+  padding: 20px 0 20px;
+  line-height: 0.5em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.white {
+  color: #FFFFFF;
+}
+.red {
+  color: #FF0000;
+}
+
+.photo {
+  position: relative;
+  background-color: #D44141;
+}
+
+.photo img:hover {
+  opacity: 0.2;
 }
