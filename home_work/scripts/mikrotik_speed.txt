@@ -1,0 +1,28 @@
+//Скорость 1/2
+queue type set Download-2M pcq-rate=1M
+queue type set Download-5M pcq-rate=3M
+queue type set Download-10M pcq-rate=5M
+queue type set Download-15M pcq-rate=7M
+queue type set Download-25M pcq-rate=12M
+queue type set Download-30M pcq-rate=15M
+queue type set Download-45M pcq-rate=22M
+queue type set Download-50M pcq-rate=25M
+queue type set Download-55M pcq-rate=27M
+queue type set Download-90M pcq-rate=45M
+queue type set Download-100M pcq-rate=50M
+
+
+
+
+//Исходные данные
+queue type set Download-2M pcq-rate=2200k
+queue type set Download-5M pcq-rate=6M
+queue type set Download-10M pcq-rate=11M
+queue type set Download-15M pcq-rate=16M
+queue type set Download-25M pcq-rate=26M
+queue type set Download-30M pcq-rate=31M
+queue type set Download-45M pcq-rate=46M
+queue type set Download-50M pcq-rate=51M
+queue type set Download-55M pcq-rate=56M
+queue type set Download-90M pcq-rate=91M
+queue type set Download-100M pcq-rate=100M

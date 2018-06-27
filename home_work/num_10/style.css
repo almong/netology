@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header {
+  color: #CBCCD2;
+  background-image: url("images/header-backgroudn.jpg");
+}
+
+.logo_menu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-image: url("images/header-backgroudn.jpg");
+  z-index: 1;
+}
+
+.logo_menu_center {
+  position: relative;
+  border-bottom: 1px solid #505369;
+  max-width: 1168px;
+  margin: auto;
+  padding: 40px 10px 40px;
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  width: 20%;
+  text-transform: uppercase;
+}
+
+.menu {
+  width: 80%;
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  margin-right: 10px;
+  text-align: right;
+
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: #CBCCD2;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav div {
+  display: inline-block;
+  margin-left: 20px;
+
+}
+
+.content {
+  position: relative;
+  max-width: 1168px;
+  margin: auto;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.big {
+  text-transform: uppercase;
+  font-size: 60px;
+}
+
+.content > div {
+  display: inline-block;
+  padding: 120px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 60px;
+  padding: 10px;
+  background-color: #E84545;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.button a {
+  color: #FFFFFF;
+}
+
+.button a:hover {
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #4545E8;
+}
