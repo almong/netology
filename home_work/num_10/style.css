@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  min-width: 1000px;
 }
 
 header {
@@ -121,12 +122,18 @@ nav div {
   max-width: 1168px;
   margin: auto;
   text-align: center;
+  font-size: 0px;
 }
 
 .icon_block {
   display: inline-block;
-  width: 380px;
+  width: 33.33%;
   vertical-align: top;
+}
+
+.icon_block p {
+  font-size: 14px;
+  padding: 0 5px 0;
 }
 
 .icon {
