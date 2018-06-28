@@ -9,7 +9,8 @@ body {
 
 header {
   color: #CBCCD2;
-  background-image: url("images/header-backgroudn.jpg");
+  background-image: url("https://downloader.disk.yandex.ru/preview/69f00283ce5d38211cb3f8c545c5220318ba55a99a2babbf314d010d380f9d67/5b34c2d0/M0ls_5EGSyDpuQ_SThOZt_uCgn5-4DmbZIeni9R1c00tEp1gBxOpCIqdCfLcsF4oUdJwZa4thTiQH9mhnLh5nQ%3D%3D?uid=0&filename=header-backgroudn.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&tknv=v2&size=2048x2048");
+  background-size: cover;
 }
 
 .logo_menu {
@@ -17,8 +18,9 @@ header {
   top: 0px;
   left: 0px;
   right: 0px;
-  background-image: url("images/header-backgroudn.jpg");
+  background-image: url("https://downloader.disk.yandex.ru/preview/69f00283ce5d38211cb3f8c545c5220318ba55a99a2babbf314d010d380f9d67/5b34c2d0/M0ls_5EGSyDpuQ_SThOZt_uCgn5-4DmbZIeni9R1c00tEp1gBxOpCIqdCfLcsF4oUdJwZa4thTiQH9mhnLh5nQ%3D%3D?uid=0&filename=header-backgroudn.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&tknv=v2&size=2048x2048");
   z-index: 1;
+  opacity: 0.9;
 }
 
 .logo_menu_center {
@@ -90,7 +92,6 @@ nav div {
 }
 
 .content > div {
-  display: inline-block;
   padding: 120px;
 }
 
@@ -125,12 +126,13 @@ nav div {
 .icon_block {
   display: inline-block;
   width: 380px;
+  vertical-align: top;
 }
 
 .icon {
   width: 70px;
   height: 70px;
-  background: url("images/icon1.png");
+  background: url("https://downloader.disk.yandex.ru/preview/f387e8fa7b272733878a8241af9ff2adce17cf58c4c21f78144718a30f653dc8/5b34c383/M0ls_5EGSyDpuQ_SThOZtz_4qVEMTeRbPzu21EvRW4vX9FBPNHqRXKwc2g3V8cFS_iPwNAUp3C7rTPqpR5P6ww%3D%3D?uid=0&filename=icon1.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&tknv=v2&size=1680x923");
   background-size: contain;
   margin: auto;
 }
@@ -165,7 +167,7 @@ nav div {
 
 .footer_1 > div {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   width: 33%;
 
 }
@@ -222,7 +224,6 @@ nav div {
     font-size: 14px;
     color: #FFFFFF;
 }
-
 
 .photo:hover .hover{
   display: block;
