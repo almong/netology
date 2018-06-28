@@ -18,7 +18,7 @@ header {
   top: 0px;
   left: 0px;
   right: 0px;
-  background-image: url("https://downloader.disk.yandex.ru/preview/69f00283ce5d38211cb3f8c545c5220318ba55a99a2babbf314d010d380f9d67/5b34c2d0/M0ls_5EGSyDpuQ_SThOZt_uCgn5-4DmbZIeni9R1c00tEp1gBxOpCIqdCfLcsF4oUdJwZa4thTiQH9mhnLh5nQ%3D%3D?uid=0&filename=header-backgroudn.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&tknv=v2&size=2048x2048");
+  background-color: #30344F;
   z-index: 1;
   opacity: 0.9;
 }
