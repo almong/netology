@@ -1,0 +1,83 @@
+/* body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.topbar {
+  height: 38px;
+  background-color: #1DA5DF;
+}
+
+.logo_menu {
+  height: 73px;
+  background-color: #FAFAFA;
+}
+
+.slider {
+  height: 500px;
+  background-color: #1DA5DF;
+}
+
+.tariffs {
+  height: 313px;
+  background-color: #FAFAFA;
+}
+
+.payment {
+  background-color: #F5F5F5;
+}
+
+.container {
+  width: 1170px;
+  margin: auto;
+  font-size: 0px;
+}
+
+.sub-block {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  background-color: #FFFFFF;
+}
+
+.container h1, .sub-block h3 {
+  color: #1DA5DF;
+  font-family: 'Oswald', sans-serif;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.sub-block h3 {
+  font-size: 24px;
+}
+
+.sub-block p, .sub-block a {
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  color: #303030;
+}
+
+.contact {
+  height: 550px;
+  background-color: #FAFAFA;
+}
+
+.map {
+  height: 400px;
+  background-color: #1DA5DF;
+}
+
+footer {
+  height: 246px;
+  background-color: #FAFAFA;
+}
+
+.vk_messages {
+  height: 50px;
+  width: 193px;
+  background-color: #1DA5DF;
+} */
