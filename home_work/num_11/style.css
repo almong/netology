@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 body {
+  min-width: 1170px;
   margin: 0;
 }
 
@@ -170,6 +171,11 @@ input {
 
 .summa {
   margin-bottom: 0px;
+}
+
+.btn:hover {
+  background-color: #F5F5F5;
+  color: #424447;
 }
 
 .contact {
