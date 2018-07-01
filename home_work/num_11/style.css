@@ -1,6 +1,8 @@
-/* body {
-  margin: 0;
+* {
   box-sizing: border-box;
+}
+body {
+  margin: 0;
 }
 
 .topbar {
@@ -20,11 +22,19 @@
 
 .tariffs {
   height: 313px;
-  background-color: #FAFAFA;
+  background-color: #FFFFFF;
 }
 
 .payment {
   background-color: #F5F5F5;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.form-payment {
+
 }
 
 .container {
@@ -33,32 +43,133 @@
   font-size: 0px;
 }
 
+.container > div {
+}
+
 .sub-block {
+  background-color: #FFFFFF;
+  padding: 20px;
+  line-height: 1.42857143;
+}
+
+img {
+  width: 50px;
+  vertical-align: middle;
+}
+
+.sub-block-pay {
   display: inline-block;
   width: 50%;
   vertical-align: top;
-  background-color: #FFFFFF;
+  padding: 0 15px;
 }
 
-.container h1, .sub-block h3 {
+.sub-block-credit {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  padding: 0 15px;
+}
+
+.container > div h1, .sub-block h3 {
   color: #1DA5DF;
   font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
 }
 
 .container h1 {
+  margin: 20px 0px 10px;
+  /* padding: 20px 0 20px; */
   text-align: center;
   font-size: 36px;
   text-transform: uppercase;
 }
 
+.row {
+  margin: 0 -15px;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+input {
+  display: inline-block;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  margin-bottom: 10px;
+}
+
+.btn {
+  font-size: 14px;
+  padding: 10px 22px 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 0;
+  text-shadow: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  background: #1DA5DF;
+  color: #FFFFFF;
+  margin-left: 15px;
+}
+
+.col_1, .col_2, .col_3, .col_4, .col_5 {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 15px;
+}
+
+.col_1, .col_3 {
+  width: 66.66%;
+}
+
+.col_2, .col_4 {
+  width: 33.33%;
+}
+
 .sub-block h3 {
   font-size: 24px;
+  margin: 20px 0 10px;
 }
 
 .sub-block p, .sub-block a {
   font-size: 14px;
   font-family: 'Lato', sans-serif;
   color: #303030;
+  text-decoration: none;
+}
+
+.sub-block a {
+  color: #1DADE8;
+}
+
+.size14px {
+  font-size: 14px;
+  margin: 0px;
+}
+
+.col_5 {
+  margin-bottom: 40px;
+}
+
+.rub:after {
+  content: " \20BD";
+}
+
+.summa {
+  margin-bottom: 0px;
 }
 
 .contact {
@@ -79,5 +190,8 @@ footer {
 .vk_messages {
   height: 50px;
   width: 193px;
-  background-color: #1DA5DF;
-} */
+  background-color: #99B5D7;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
