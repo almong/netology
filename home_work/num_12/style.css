@@ -1,0 +1,189 @@
+/*
+1. Исправил отступы
+2. Отфармотировал код
+3. Исправил названия селекторов на актуальные
+4. Проверил через валидатор
+ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 14px Montserrat, sans-serif;
+  color: #515151;
+  background-color: #ebebeb;
+}
+
+p {
+  line-height: 26px;
+  font: 14px Montserrat, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+.wrapper {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.head {
+  background-color: #373c3f;
+}
+
+.menu {
+  margin: 0;
+  padding: 35px 45px 0 45px;
+  list-style-type: none;
+}
+
+.menu li {
+  display: inline-block;
+  padding: 0 30px 35px 0;
+  vertical-align: center;
+}
+
+.menu li a {
+  font: 14px Montserrat, sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.menu li a:hover {
+  color: #15b0c3;
+}
+
+.banner {
+  padding: 130px 75px;
+  background-color: #15b0c3;
+}
+
+.caption {
+  margin: 0;
+  font: 60px Montserrat, sans-serif;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.link {
+  padding-top: 30px;
+  font-size: 0;
+}
+
+.link-text {
+  display: inline-block;
+  width: 82%;
+  font: 40px Montserrat, sans-serif;
+  color: rgba(255, 255, 255, .6);
+}
+
+.link-nav {
+  display: inline-block;
+  width: 18%;
+  font-size: 42px;
+  color: #ffffff;
+}
+
+.info {
+  font-size: 0;
+  background-color: #27212c;
+}
+
+.text {
+  display: inline-block;
+  margin: 0;
+  width: 800px;
+  padding: 93px 75px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #9787a6;
+}
+
+.navigation {
+  width: 224px;
+  padding: 93px 60px;
+  font-size: 30px;
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  background-color: #bc3183;
+}
+
+.gallery {
+  font-size: 0;
+  overflow: hidden;
+}
+
+.arrow {
+  display: inline-block;
+  float: left;
+  width: 33.3333%;
+  height: 297px;
+  line-height: 297px;
+  font-size: 36px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #5b0fa1;
+}
+
+.pic {
+  display: inline-block;
+  float: left;
+  width: 33.3333%;
+  height: 297px;
+  line-height: 297px;
+  font-size: 36px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #5b0fa1;
+}
+
+.pic img {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 75px;
+  font-size: 0;
+}
+
+.content-title {
+  font-size: 30px;
+  font-weight: normal;
+  color: #088ca5;
+}
+
+.text1 {
+  vertical-align: top;
+  display: inline-block;
+  width: 46%;
+  font-size: 14px;
+}
+.text2 {
+  vertical-align: top;
+  display: inline-block;
+  width: 46%;
+  font-size: 14px;
+  margin-left: 8%;
+}
+
+.footer {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #27212c;
+}
+
+.copyright {
+  color: #ffffff;
+}
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
