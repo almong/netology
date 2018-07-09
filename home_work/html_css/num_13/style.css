@@ -168,7 +168,7 @@ h2 {
 .galery {
   font-size: 0px;
   text-align: center;
-  min-width: 1000px;
+  max-width: 1900px;
   margin-left: -1px;
   overflow: hidden;
   margin: 0;
