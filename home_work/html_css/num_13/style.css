@@ -137,6 +137,7 @@ h2 {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   padding-top: 20px;
+  color: #2D3033;
 }
 
 .text_icon  p {
@@ -144,16 +145,9 @@ h2 {
   padding: 5px 45px 0;
   font-family: 'Raleway', sans-serif;
   line-height: 21px;
+  color: #6C7279;
   
 }
-
-/* .icon {
-  width: 70px;
-  height: 70px;
-  background: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/num_13/img/feature-1.png");
-  background-size: contain;
-  margin: auto;
-} */
 
 .photo {
   display: inline-block;
@@ -162,16 +156,18 @@ h2 {
   width: 25%;
   border-bottom: #FFFFFF solid 1px;
   border-left: #FFFFFF solid 1px;
+  overflow: hidden;
 }
 
+.photo:nth-child(4n+1) {
+  border-left: 0px;
+}
 
 .galery {
   font-size: 0px;
   text-align: center;
   max-width: 1900px;
-  margin-left: -1px;
-  overflow: hidden;
-  margin: 0;
+  margin: auto;
 }
 
 .footer_0 {
@@ -225,6 +221,8 @@ h2 {
 .uppercase {
   text-transform: uppercase;
   color: #FFFFFF;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
 }
 
 .white {
@@ -237,7 +235,8 @@ h2 {
 .hover {
     position: absolute;
     display:none;
-    background: rgba(232,69,69,0.5);
+    background: #DA4747;
+    opacity: 0.9;
     cursor: pointer;
     width: 100%;
     height: 100%;
@@ -246,6 +245,9 @@ h2 {
     color: #FFFFFF;
 }
 
+.hover p:not(.uppercase) {
+  font-family: 'Raleway', sans-serif; 
+}
 .photo:hover .hover{
   display: block;
 }
