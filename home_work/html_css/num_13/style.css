@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  min-width: 1000px;
+  }
+
+header {
+  color: #CBCCD2;
+  background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/num_10/images/header-backgroudn.jpg");
+  background-size: cover;
+}
+
+.logo_menu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #30344F;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.logo_menu_center {
+  position: relative;
+  border-bottom: 1px solid #505369;
+  max-width: 1168px;
+  margin: auto;
+  padding: 30px 10px 30px;
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  width: 20%;
+  text-transform: uppercase;
+}
+
+.logo .active {
+  font-weight: 900;
+  color: #66697E;
+}
+
+.logo .box {
+  margin-left: -3px;
+  color: #FFFFFF;
+  font-weight: 400;
+}
+
+.menu {
+  width: 80%;
+  position: absolute;
+  display: inline-block;
+  font-size: 12px;
+  right: 0;
+  margin-right: 10px;
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: #CBCCD2;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav div {
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.content {
+  position: relative;
+  max-width: 1168px;
+  margin: auto;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.big {
+  text-transform: uppercase;
+  font-size: 60px;
+}
+
+.content > div {
+  padding: 120px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 60px;
+  padding: 10px;
+  background-color: #E84545;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.button a {
+  color: #FFFFFF;
+}
+
+.button a:hover {
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #4545E8;
+}
+
+.center {
+  padding: 120px 0px 110px;
+  max-width: 1168px;
+  margin: auto;
+  text-align: center;
+  font-size: 0px;
+}
+
+.icon_block {
+  display: inline-block;
+  width: 33.33%;
+  vertical-align: top;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+.text_icon  p {
+  font-size: 14px;
+  padding: 5px 45px 0;
+  font-family: 'Raleway', sans-serif;
+  line-height: 21px;
+  
+}
+
+/* .icon {
+  width: 70px;
+  height: 70px;
+  background: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/num_13/img/feature-1.png");
+  background-size: contain;
+  margin: auto;
+} */
+
+.photo {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 25%;
+  border-bottom: #FFFFFF solid 1px;
+  border-left: #FFFFFF solid 1px;
+}
+
+
+.galery {
+  font-size: 0px;
+  text-align: center;
+  max-width: 1900px;
+  margin-left: -1px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.footer_0 {
+  background-color: #3A3E64;
+}
+
+.footer_1 {
+  color: #81849B;
+  padding-top: 10px;
+  max-width: 1168px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer_1 > div {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+
+}
+.sn {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: 2px solid #FFFFFF;
+}
+
+.sn:hover {
+  background-color: #313454;
+}
+
+.sn a {
+  display: block;
+  height: 100%;
+  padding-top: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.copyright_0 {
+  background-color: #313454;
+}
+
+.copyright {
+  color: #81849B;
+  text-align: center;
+  padding: 20px 0 20px;
+  line-height: 0.5em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.white {
+  color: #FFFFFF;
+}
+.red {
+  color: #FF0000;
+}
+
+.hover {
+    position: absolute;
+    display:none;
+    background: rgba(232,69,69,0.5);
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding-top:30%;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.photo:hover .hover{
+  display: block;
+}
+
+.center .icon_block:nth-child(n+4) {
+  margin-top: 55px;
+}
