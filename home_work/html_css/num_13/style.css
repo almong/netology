@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   min-width: 1000px;
-}
+  }
 
 header {
   color: #CBCCD2;
@@ -118,7 +118,7 @@ nav div {
 }
 
 .center {
-  padding-top: 10px;
+  padding: 120px 0px 110px;
   max-width: 1168px;
   margin: auto;
   text-align: center;
@@ -131,33 +131,47 @@ nav div {
   vertical-align: top;
 }
 
-.icon_block p {
+h2 {
   font-size: 14px;
-  padding: 0 5px 0;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  padding-top: 20px;
 }
 
-.icon {
+.text_icon  p {
+  font-size: 14px;
+  padding: 5px 45px 0;
+  font-family: 'Raleway', sans-serif;
+  line-height: 21px;
+  
+}
+
+/* .icon {
   width: 70px;
   height: 70px;
-  /* background: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/num_13/img/feature-1.png"); */
-  /* background-size: contain; */
+  background: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/num_13/img/feature-1.png");
+  background-size: contain;
   margin: auto;
-}
-
-.galery {
-  font-size: 0px;
-  text-align: center;
-}
+} */
 
 .photo {
   display: inline-block;
   position: relative;
   vertical-align: top;
   width: 25%;
+  border-bottom: #FFFFFF solid 1px;
+  border-left: #FFFFFF solid 1px;
 }
 
-.galery img {
-  width: 100%;
+
+.galery {
+  font-size: 0px;
+  text-align: center;
+  min-width: 1000px;
+  margin-left: -1px;
+  overflow: hidden;
+  margin: 0;
 }
 
 .footer_0 {
@@ -234,4 +248,8 @@ nav div {
 
 .photo:hover .hover{
   display: block;
+}
+
+.center .icon_block:nth-child(n+4) {
+  margin-top: 55px;
 }
