@@ -257,10 +257,28 @@ h2 {
 }
 
 .icon {
-  width: 70px;
+  width: 80px;
   height: 60px;
   background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/num_14/img/sprite-min.png");
   margin: auto;
 }
 
-.icon
+.icon-2 {
+  background-position-x: -85px;
+}
+
+.icon-3 {
+  background-position-x: -170px;
+}
+
+.icon-4 {
+  background-position-x: -265px;
+}
+
+.icon-5 {
+  background-position-x: -355px;
+}
+
+.icon-6 {
+  background-position-x: -442px;
+}
