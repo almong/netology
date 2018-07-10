@@ -255,3 +255,12 @@ h2 {
 .center .icon_block:nth-child(n+4) {
   margin-top: 55px;
 }
+
+.icon {
+  width: 70px;
+  height: 60px;
+  background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/num_14/img/sprite-min.png");
+  margin: auto;
+}
+
+.icon
