@@ -131,15 +131,6 @@ nav div {
   vertical-align: top;
 }
 
-h2 {
-  font-size: 14px;
-  font-weight: bold;
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
-  padding-top: 20px;
-  color: #2D3033;
-}
-
 .text_icon  p {
   font-size: 14px;
   padding: 5px 45px 0;
@@ -254,4 +245,13 @@ h2 {
 
 .center .icon_block:nth-child(n+4) {
   margin-top: 55px;
+}
+
+h2 {
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 20px;
+  color: #2D3033;
 }
