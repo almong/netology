@@ -99,7 +99,7 @@ body {
 }
 
 .head-nav li {
-    vertical-align: middle;
+    /* vertical-align: middle; */
     display: inline-block;
 }
 
@@ -133,8 +133,8 @@ body {
 }
 
 .search label {
+    /* vertical-align: middle; */
     display: inline;
-    vertical-align: middle;
     padding-top: 4px;
     margin-right: 7px;
     letter-spacing: 1px;
