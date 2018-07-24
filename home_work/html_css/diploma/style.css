@@ -329,6 +329,7 @@ body {
       text-transform: uppercase;
       letter-spacing: 1px;
       background: linear-gradient(to top, #257385, #3096a4);
+      background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       margin-bottom: 10px;
@@ -379,18 +380,23 @@ body {
 }
 
 .blog-button {
+    display: block;
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
+    text-decoration: none;
     color: #ffffff;
-    width: 110px;
-    height: 30;
+    width: 100px;
     background: linear-gradient(to top, #40312a, #53443d);
     font-family: 'Marriweather', serif;
     font-size: 14px;
     font-weight: bold;
-    padding: 7px 0;
-    margin: 40px 10px 15px auto;
+    padding: 6px;
+    margin: 40px 12px 15px auto;
+}
+
+.blog-button:hover {
+    background: #775a4b;
 }
 
 aside {
@@ -433,6 +439,7 @@ aside h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
     background: linear-gradient(to top, #257385, #3096a4);
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     margin-bottom: 10px;
@@ -486,6 +493,12 @@ hr {
     color: #000000;
 }
 
+.who a {
+    color: #247184;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .who {
     margin-top: 50px;
 }
@@ -501,7 +514,7 @@ footer {
 .big-footer {
     font-size: 0px;
     background: linear-gradient(to top, #40312a, #3a2c25);
-    padding: 35px;
+    padding: 25px 35px;
     
 }
 
@@ -511,9 +524,10 @@ footer {
     text-transform: uppercase;
     letter-spacing: 1px;
     background: linear-gradient(to top, #257385, #3096a4);
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    margin-bottom: 10px;
+    margin-bottom: 24px;
 }
 
 .line {
@@ -549,7 +563,7 @@ footer {
     width: 112px;
     height: 32px;
     border: 1px solid #febf5d;
-    background-color: #fdbe5e;
+    background: linear-gradient(to top, #d19f51, #febf5d);
     text-transform: uppercase;
     color: #ffffff;
     font-size: 15px;
@@ -559,4 +573,24 @@ footer {
     text-align: center;
     line-height: 30px;
     border-radius: 1px;
+}
+
+.footer-button:hover {
+    background: linear-gradient(to top, #febf5d, #d19f51);
+}
+
+.big-footer input::-webkit-input-placeholder {
+    color: #247184;
+    font-family: 'Marriveather', serif;
+}
+
+.big-footer input::-moz-input-placeholder {
+    color: #247184;
+    font-family: 'Marriveather', serif;
+}
+
+.name {
+    width: 112px;
+    height: 37px;
+    
 }
