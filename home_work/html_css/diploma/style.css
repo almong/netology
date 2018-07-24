@@ -133,7 +133,7 @@ body {
 }
 
 .search label {
-    /* vertical-align: middle; */
+    vertical-align: middle;
     display: inline;
     padding-top: 4px;
     margin-right: 7px;
@@ -342,7 +342,7 @@ body {
       font-weight: 400;
       text-transform: capitalize;
       letter-spacing: 2px;
-      margin-top: 10px;
+      margin-top: 1px;
       margin-left: -2px;
       margin-bottom: 5px;
       
@@ -388,7 +388,7 @@ body {
     color: #ffffff;
     width: 100px;
     background: linear-gradient(to top, #40312a, #53443d);
-    font-family: 'Marriweather', serif;
+    font-family: 'Merriweather', serif;
     font-size: 14px;
     font-weight: bold;
     padding: 6px;
@@ -415,11 +415,11 @@ aside {
     text-align: center;
     width: 33.33%;
     font-size: 14px;
-    font-family: 'Marriweather', serif;
+    font-family: 'Merriweather', serif;
     font-weight: bold;
     color: #ffffff;
     text-shadow: 0 -1px #000000;
-    padding: 10px 0;
+    padding: 12px 0;
     letter-spacing: 1px;
 }
 
@@ -514,8 +514,7 @@ footer {
 .big-footer {
     font-size: 0px;
     background: linear-gradient(to top, #40312a, #3a2c25);
-    padding: 25px 35px;
-    
+    padding: 25px 35px;    
 }
 
 .big-footer h2 {
@@ -560,6 +559,7 @@ footer {
 
 .footer-button {
     background-color: #134a56;
+    letter-spacing: 1px;
     width: 112px;
     height: 32px;
     border: 1px solid #febf5d;
@@ -567,7 +567,7 @@ footer {
     text-transform: uppercase;
     color: #ffffff;
     font-size: 15px;
-    font-family: 'Marriweather', serif;
+    font-family: 'Merriweather', serif;
     font-weight: bold;
     text-shadow: 0 -1 #c3892f;
     text-align: center;
@@ -579,18 +579,152 @@ footer {
     background: linear-gradient(to top, #febf5d, #d19f51);
 }
 
-.big-footer input::-webkit-input-placeholder {
+.big-footer input {
+    background-color: #f8eedf;
+    border-radius: 1px;
+    border: 1px solid #d9d9d9;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
     color: #247184;
-    font-family: 'Marriveather', serif;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
 }
 
-.big-footer input::-moz-input-placeholder {
+input::-webkit-input-placeholder {
     color: #247184;
-    font-family: 'Marriveather', serif;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    padding-left: 13px;
+    font-size: 11px;
+}
+
+/* Странно работает moz-placeholder */
+input::-moz-placeholder {
+    color: #247184;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 11px;
 }
 
 .name {
-    width: 112px;
-    height: 37px;
+    width: 110px;
+    height: 35px;    
+}
+
+.l-name {
+    width: 150px;
+    height: 35px;
+    margin-left: 8px;
+}
+
+.bla {
+    width: 270px;
+    height: 110px;
+    margin: 13px 0;
+}
+
+.email {
+    margin-bottom: 32px;
+    width: 270px;
+    height: 35px;
+}
+
+.project h2 {
+    padding-left: 30px;
+}
+.project img:nth-child(even) {
+    margin-right: 20px;
+    padding-left: 30px;
+}
+
+.project img{
+    margin-bottom: 20px;
+}
+
+.twitt h2,
+.twitt p {
+    padding-left: 45px;
+}
+
+.twitt p {
+    padding-top: 10px;
+    padding-bottom: 5px;  
+}
+
+.form .footer-button {
+    display: block;
+    margin-left: auto;
+    margin-right: 40px;
+    margin-top: -5px;
+}
+
+.project .footer-button {
+    margin-left: auto;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.twitt .footer-button {
+    margin-left: auto;
+    margin-right: 0px;
+    margin-top: 80px;
+}
+
+.big-footer::after {
+    display: block;
+    content: '';
+    height: 20px;
+}
+
+.small-footer {
+    position: relative;
     
+    background: linear-gradient(to top, #247184, #2f92a2);
+}
+
+
+.small-footer p {
+    display: inline-block;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    font-size: 11px;
+    color: #ffffff;
+    letter-spacing: 0.75px;
+    padding: 27px 32px;
+}
+
+.small-menu {
+    display: inline-block;
+    position: absolute;
+    right: 32px;
+    letter-spacing: 0.75px;
+}
+
+.small-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 24.5px 0;
+}
+
+.small-menu li {
+    display: inline-block;
+}
+
+.small-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Merriweather', serif;
+    font-size: 11px;
+    letter-spacing: 0.75px;
+}
+
+.small-menu ul li:nth-child(n+2)::before {
+    content: ' | ';
+    display: inline;
+    color: #ffffff;
+    font-family: 'Merriweather', serif;
+    font-size: 11px;
+}
+
+.small-menu a:hover {
+    text-decoration: underline;
 }
