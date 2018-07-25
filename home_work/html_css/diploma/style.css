@@ -5,7 +5,6 @@ body {
 
 .header {
     position: relative;
-    background-color: #fbbc5a;
 }
 
 .logo {
@@ -23,7 +22,7 @@ body {
 }
 
 .noise {
-    background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/noise.png");
+    background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/noise.png"), linear-gradient(to top, #ffc05e, #eeaf4d);
     background-repeat: repeat;
 }
 
@@ -48,9 +47,14 @@ body {
 
 .social-net a {
     display: inline-block;
-    width: 31px;
+    width: 30px;
     height: 30px;
     background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/sprite-social.png");
+}
+
+.social-net a:hover {
+    box-shadow: 0 0 3px 2px #134a56;
+    border-radius: 5px;
 }
 
 .icon-1 {
@@ -58,7 +62,7 @@ body {
 }
 
 .icon-2 {
-    background-position-x: -43px;
+    background-position-x: -44px;
 }
 
 .icon-3 {
@@ -232,15 +236,16 @@ body {
     width: 160px;
     height: 45px;
     border-radius: 5px;
-    background-color: #fbbc5a;
+    background: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/noise.png"), linear-gradient(to bottom, #ffc05e, #eeaf4d);
     line-height: 45px;
     text-decoration: none;
     margin: 30px 30px 10px 0;
-    background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/noise.png");
+
 }
 
 .button:hover {
-    background-color: #c3892f;
+    background: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/noise.png"), linear-gradient(to top, #ffc05e, #d79f47);
+    
 }
 
 .img {
@@ -290,6 +295,15 @@ body {
     bottom: 55px;
 }
 
+.bread-crumb a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.bread-crumb a:hover {
+    color: #0a252b;
+}
+
 .arrow {
     position: absolute;
     border: 7px solid transparent; border-bottom: 10px solid #e0cfad;
@@ -304,23 +318,24 @@ body {
     bottom: 0px;
     width: 1020px;
     height: 4px;
-  }
+}
   
   .blog-aside {
     font-size: 0px;
     position: relative;
+    background: linear-gradient(45deg, #eddcc5, #f8eedf);
 }
 
-  .blog {
+.blog {
       /* position: relative; */
       background-color: #f8eedf;
       display: inline-block;
       vertical-align: top;
       padding: 30px 35px 35px 35px;
       width: calc(634px - 70px);
-  }
+}
 
-  .blog h2 {
+.blog h2 {
       font-size: 21px;
       font-family: 'Merriweather', serif;
       text-transform: uppercase;
@@ -330,9 +345,9 @@ body {
       -webkit-background-clip: text;
       color: transparent;
       margin-bottom: 10px;
-  }
+}
 
-  article h3 {
+article h3 {
       color: #40312a;
       font-size: 28px;
       font-family: 'Lato', sans-serif;
@@ -343,9 +358,9 @@ body {
       margin-left: -2px;
       margin-bottom: 5px;
       
-  }
+}
 
-  .comment {
+.comment {
     color: #ce953c;
     font-family: 'Merriweather', serif;
     font-weight: bold;
@@ -354,7 +369,16 @@ body {
     letter-spacing: 0.5px;
     word-spacing: 1px;
     margin-top: 0px;
-  }
+}
+
+.comment a {
+    text-decoration: none;
+    color: #ce953c;
+}
+
+.comment a:hover {
+    color: #362810;
+}
 
 .blog-text {
     font-family: Verdana, sans-serif;
@@ -368,6 +392,10 @@ body {
     color: #247184;
     text-decoration: none;
     font-weight: bold;
+}
+
+.blog-text a:hover {
+    color: #0f3038;
 }
 
 .blog img {
@@ -400,7 +428,6 @@ aside {
     position: absolute;
     right: 0;
     top: 0;
-    background: linear-gradient(45deg, #eddcc5, #f8eedf);
     width: 385px;
     border-left-style: solid;
     border-left-width: 1px;
@@ -418,6 +445,11 @@ aside {
     text-shadow: 0 -1px #000000;
     padding: 12px 0;
     letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.catalog a:hover {
+    color: #2c8897;
 }
 
 .sidebar {
@@ -475,6 +507,7 @@ aside h2 {
     width: 2px;
     height: 100px;
     background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/separator-v.png");
+    background-repeat: no-repeat;
 }
 
 .sponsors > div:nth-child(-n+3) {
@@ -496,6 +529,10 @@ hr {
     font-weight: bold;
 }
 
+.who a:hover {
+    color: #0f3038;
+}
+
 .who {
     margin-top: 50px;
 }
@@ -509,6 +546,7 @@ footer {
 }
 
 .big-footer {
+    position: relative;
     font-size: 0px;
     background: linear-gradient(to top, #40312a, #3a2c25);
     padding: 25px 35px;    
@@ -542,6 +580,18 @@ footer {
     width: 33.33%;
 }
 
+.project a {
+    display: inline-block;
+    vertical-align: top;
+    width: 125px;
+    height: 95px;
+    background-color: #e0cfad;
+}
+.project a:hover {
+    outline: 4px solid #2795ad;
+    outline-offset: -4px;
+}
+
 .big-footer p {
     font-size: 12px;
     font-family: Verdana, sans-serif;
@@ -555,8 +605,10 @@ footer {
 }
 
 .footer-button {
+    box-sizing: border-box;
     background-color: #134a56;
     letter-spacing: 1px;
+    padding: 0;
     width: 112px;
     height: 32px;
     border: 1px solid #febf5d;
@@ -568,12 +620,13 @@ footer {
     font-weight: bold;
     text-shadow: 0 -1 #c3892f;
     text-align: center;
-    line-height: 30px;
+    line-height: 35px;
     border-radius: 1px;
 }
 
 .footer-button:hover {
     background: linear-gradient(to top, #febf5d, #d19f51);
+    cursor: pointer;
 }
 
 .big-footer input {
@@ -584,13 +637,14 @@ footer {
     color: #247184;
     font-family: 'Merriweather', serif;
     font-weight: bold;
+    box-sizing: border-box;
+    padding: 0 13px;
 }
 
 input::-webkit-input-placeholder {
     color: #247184;
     font-family: 'Merriweather', serif;
     font-weight: bold;
-    padding-left: 13px;
     font-size: 11px;
 }
 
@@ -628,12 +682,12 @@ input::-moz-placeholder {
 .project h2 {
     padding-left: 30px;
 }
-.project img:nth-child(even) {
+.project a:nth-child(even) {
     margin-right: 20px;
-    padding-left: 30px;
+    margin-left: 30px;
 }
 
-.project img{
+.project a{
     margin-bottom: 20px;
 }
 
@@ -648,28 +702,28 @@ input::-moz-placeholder {
 }
 
 .form .footer-button {
+    position: absolute;
     display: block;
-    margin-left: auto;
-    margin-right: 40px;
-    margin-top: -5px;
+    bottom: 45px;
+    left: 195px;
 }
 
 .project .footer-button {
-    margin-left: auto;
-    margin-right: 15px;
-    margin-top: 15px;
+    position: absolute;
+    bottom: 45px;
+    right: 370px;
 }
 
 .twitt .footer-button {
-    margin-left: auto;
-    margin-right: 0px;
-    margin-top: 80px;
+    position: absolute;
+    bottom: 45px;
+    right: 35px;
 }
 
 .big-footer::after {
     display: block;
     content: '';
-    height: 20px;
+    height: 65px;
 }
 
 .small-footer {
