@@ -174,7 +174,6 @@ body {
   
 .welcome {
     background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/bg.jpg");
-    /* background-repeat: ; */
     position: relative;
     border-bottom: 4px solid #ffffff;
     border-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/separator-h.png") 4;
@@ -243,12 +242,10 @@ body {
     line-height: 45px;
     text-decoration: none;
     margin: 30px 30px 10px 0;
-
 }
 
 .button:hover {
     background: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/noise.png"), linear-gradient(to top, #ffc05e, #d79f47);
-    
 }
 
 .img {
@@ -529,11 +526,6 @@ aside h2 {
     margin-right: 15px;
 }
 
-/* hr {
-    border-bottom: 1px solid  #3196af;
-    border-top: 1px solid #134a56;
-}   */
-
 .who .who-text {
     color: #000000;
 }
@@ -668,7 +660,6 @@ input::-webkit-input-placeholder {
     font-size: 11px;
 }
 
-/* Странно работает moz-placeholder */
 input::-moz-placeholder {
     color: #247184;
     font-family: 'Merriweather', serif;
