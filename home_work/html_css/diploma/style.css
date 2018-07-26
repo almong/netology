@@ -9,6 +9,7 @@ body {
 
 .logo {
     display: inline-block;
+    text-decoration: none;
     max-width: 200px;
     padding: 34px 35px;
     text-transform: uppercase;
@@ -100,7 +101,6 @@ body {
 }
 
 .head-nav li {
-    /* vertical-align: middle; */
     display: inline-block;
 }
 
@@ -173,14 +173,17 @@ body {
 }
   
 .welcome {
-    background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/bg.png");
+    background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/bg.jpg");
+    /* background-repeat: ; */
     position: relative;
+    border-bottom: 4px solid #ffffff;
+    border-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/separator-h.png") 4;
 }
 
 .welcome::after {
     display: block;
     content: '';
-    height: 95px;
+    height: 46px;
 }
 
 .hello {
@@ -281,18 +284,15 @@ body {
 .bread-crumb {
     box-sizing: border-box;
     letter-spacing: 1px;
-    position: absolute;
+    margin: auto;
     background-color: #297f91;
     color: #ffffff;
     font-weight: bold;
     font-family: 'Merriweather', serif;
     font-size: 12px;
-    padding: 22px 38px 12px;
+    padding: 15px 38px 15px;
     border-radius: 5px;
-    z-index: 0;
     width: calc(100% - 70px);
-    left: 35px;
-    bottom: 55px;
 }
 
 .bread-crumb a {
@@ -304,22 +304,16 @@ body {
     color: #0a252b;
 }
 
-.arrow {
+.bread-crumb::after {
+    display: inline-block;
+    content: '';
     position: absolute;
     border: 7px solid transparent; border-bottom: 10px solid #e0cfad;
-    z-index: 1;
+    z-index: 2;
     left: 245px;
-    bottom: 55px;
+    bottom: 46px;
 }
-
-.separator-h {
-    background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/separator-h.png");
-    position: absolute;
-    bottom: 0px;
-    width: 1020px;
-    height: 4px;
-}
-  
+ 
   .blog-aside {
     font-size: 0px;
     position: relative;
@@ -327,7 +321,6 @@ body {
 }
 
 .blog {
-      /* position: relative; */
       background-color: #f8eedf;
       display: inline-block;
       vertical-align: top;
@@ -357,7 +350,6 @@ article h3 {
       margin-top: 1px;
       margin-left: -2px;
       margin-bottom: 5px;
-      
 }
 
 .comment {
@@ -490,34 +482,57 @@ aside h2 {
 
 .catalog p {
     margin: 0;
-    padding: 20px 15px;
+    padding: 0 15px 20px;
+}
+
+.catalog .hr {
+    margin-top: 20px;
+}
+
+.catalog .hr::after {
+    content: '';
+    display: block;
+    height: 0px;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: -15px;
+    border-bottom: 1px solid  #3196af;
+    border-top: 1px solid #134a56;
+    width: calc(100% + 30px);
 }
 
 .sponsors {
     margin-top: 50px;
+
 }
 
-.sponsors > div {
+.sponsors .sponsor-bg {
     display: inline-block;
     margin-top: 10px;
     padding-bottom: 16px;
 }
 
-.sponsor-separator {
+.sponsors .sponsor-separator::after {
+    content: '';
+    display: inline-block;
     width: 2px;
     height: 100px;
+    vertical-align: top;
+    margin-left: 15px;
+    margin-top: 20px;
     background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/separator-v.png");
     background-repeat: no-repeat;
 }
 
-.sponsors > div:nth-child(-n+3) {
+
+.sponsors > div:nth-child(-n+2) {
     margin-right: 15px;
 }
 
-hr {
+/* hr {
     border-bottom: 1px solid  #3196af;
     border-top: 1px solid #134a56;
-}  
+}   */
 
 .who .who-text {
     color: #000000;
@@ -564,12 +579,16 @@ footer {
     margin-bottom: 24px;
 }
 
-.line {
+.big-footer::before {
+    content: '';
+    display: block;
     position: absolute;
     background-image: url("https://raw.githubusercontent.com/almong/netology/master/home_work/html_css/diploma/img/line.png");
     width: 100%;
     height: 1px;
+    left: 0;
     top : 1px;
+    z-index: 5;
 }
 
 .form,
@@ -580,14 +599,15 @@ footer {
     width: 33.33%;
 }
 
-.project a {
+.project .photo {
     display: inline-block;
     vertical-align: top;
     width: 125px;
     height: 95px;
     background-color: #e0cfad;
 }
-.project a:hover {
+
+.project .photo:hover {
     outline: 4px solid #2795ad;
     outline-offset: -4px;
 }
@@ -682,12 +702,13 @@ input::-moz-placeholder {
 .project h2 {
     padding-left: 30px;
 }
+
 .project a:nth-child(even) {
     margin-right: 20px;
     margin-left: 30px;
 }
 
-.project a{
+.project .photo{
     margin-bottom: 20px;
 }
 
