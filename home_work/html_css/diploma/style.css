@@ -149,9 +149,9 @@ body {
     background: linear-gradient(to top, #2c8897, #1d5c66);
     box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.5),inset 0px 1px 3px 0px rgba(0, 0, 0, 0.8);
     border-radius: 3px;
-    padding-right: 25px;
+    padding: 0 30px 0 10px;
     border: none;
-    width: 165px;
+    width: 150px;
     height: 25px;
 }
 
@@ -723,7 +723,7 @@ input::-moz-placeholder {
 .project .footer-button {
     position: absolute;
     bottom: 45px;
-    right: 370px;
+    right: 350px;
 }
 
 .twitt .footer-button {
