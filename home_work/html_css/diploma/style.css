@@ -641,7 +641,7 @@ footer {
     cursor: pointer;
 }
 
-.big-footer input {
+.bf-input {
     background-color: #f8eedf;
     border-radius: 1px;
     border: 1px solid #d9d9d9;
@@ -653,14 +653,14 @@ footer {
     padding: 0 13px;
 }
 
-input::-webkit-input-placeholder {
+.bf-input::-webkit-input-placeholder {
     color: #247184;
     font-family: 'Merriweather', serif;
     font-weight: bold;
     font-size: 11px;
 }
 
-input::-moz-placeholder {
+.bf-input::-moz-placeholder {
     color: #247184;
     font-family: 'Merriweather', serif;
     font-weight: bold;
