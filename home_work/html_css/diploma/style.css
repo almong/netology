@@ -651,7 +651,7 @@ footer {
     font-family: 'Merriweather', serif;
     font-weight: bold;
     box-sizing: border-box;
-    padding: 0 13px;
+    padding: 13px 13px;
 }
 
 .bf-input::-webkit-input-placeholder {
