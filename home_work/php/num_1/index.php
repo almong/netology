@@ -33,9 +33,9 @@ if (!empty($_POST)) {
 </head>
 <body>
     <form action="index.php" method="POST">
-    <p>Введите число</p>
-    <input type="text" name="input">
-    <input type="submit" value="Ввод">
+        <p>Введите число</p>
+        <input type="text" name="input">
+        <input type="submit" value="Ввод">
     </form>
 </body>
 </html>
