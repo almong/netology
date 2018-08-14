@@ -6,7 +6,7 @@
     $about = 'PHP разработчик';
 ?>
 
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="ru">
     <head>
         <title><?= $name . ' – ' . $about ?></title>
