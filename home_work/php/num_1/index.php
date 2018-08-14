@@ -6,7 +6,7 @@ if (!empty($_POST)) {
     $in = $_POST['input'];
     if (is_numeric($in)) {
         echo " Вы ввели: $in <br />";
-        while ($in > $_1 || $in == $_1) {
+        while ($in >= $_1) {
             if ($_1 == $in){
                 echo 'Задуманное число входит в числовой ряд Фибоначчи!'; 
                 break; 
