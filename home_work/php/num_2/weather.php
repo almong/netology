@@ -7,10 +7,10 @@ $obj = json_decode($json_str);
 //print_r ($obj);
 $temp = $obj->main->temp;
 $cloud = $obj->weather[0]->description;
-$pressure = $temp = $obj->main->pressure;
-$humidity = $temp = $obj->main->humidity;
-$wind_speed = $temp = $obj->wind->speed;
-$wind_deg = $temp = $obj->wind->deg;
+$pressure = $obj->main->pressure;
+$humidity = $obj->main->humidity;
+$wind_speed = $obj->wind->speed;
+$wind_deg = $obj->wind->deg;
 //Определяем направление ветра
 if (0 < $wind_deg || $wind_deg<90){
     $wind_deg = "С-В";
