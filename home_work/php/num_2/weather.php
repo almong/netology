@@ -12,22 +12,22 @@ $humidity = $obj->main->humidity;
 $wind_speed = $obj->wind->speed;
 $wind_deg = $obj->wind->deg;
 //Определяем направление ветра
-if (0 < $wind_deg || $wind_deg<90){
+if (0 < $wind_deg && $wind_deg<90){
     $wind_deg = "С-В";
-} elseif (90 < $wind_deg || $wind_deg<180){
-    $wind_deg = "С-З";
-}elseif (180 < $wind_deg || $wind_deg<270){
-    $wind_deg = "Ю-З";
-}elseif (270 < $wind_deg || $wind_deg<379){
+} elseif (90 < $wind_deg && $wind_deg<180){
     $wind_deg = "Ю-В";
+}elseif (180 < $wind_deg && $wind_deg<270){
+    $wind_deg = "Ю-З";
+}elseif (270 < $wind_deg && $wind_deg<360){
+    $wind_deg = "С-З";
 }elseif ($wind_deg = 0){
-    $wind_deg = "В";
-}elseif ($wind_deg = 90){
     $wind_deg = "С";
+}elseif ($wind_deg = 90){
+    $wind_deg = "В";
 }elseif ($wind_deg = 180){
-    $wind_deg = "З";
-}elseif ($wind_deg = 270){
     $wind_deg = "Ю";
+}elseif ($wind_deg = 270){
+    $wind_deg = "З";
 }
 ?>
 
