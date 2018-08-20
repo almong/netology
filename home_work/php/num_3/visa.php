@@ -1,4 +1,5 @@
 <?php
+//Страны и режим въезда PHP Нетология
     $err = 0;
     $file = 'visa.csv';
     if (is_writable($file)){
