@@ -17,17 +17,14 @@
             <td>Адрес</td>
             <td>Телефон</td>
         </tr>
-        <?php 
-            for ($i=0; $i<count($obj);$i++){
-                $arr = $obj[$i];
-                echo "<tr>
-                    <td>".$arr['firstName']."</td>
-                    <td>".$arr['lastName']."</td>
-                    <td>".$arr['address']."</td>
-                    <td>".$arr['phoneNumber']."</td>
-                </tr>"; 
-            }
-        ?>
+        <?php foreach ($obj as $arr) { ?>
+                <tr>
+                    <td><? echo $arr['firstName'];?></td>
+                    <td><? echo $arr['lastName'];?></td>
+                    <td><? echo $arr['address'];?></td>
+                    <td><? echo $arr['phoneNumber'];?></td>
+                </tr>
+            <?php }?>
     </table>
 </body>
 </html>
