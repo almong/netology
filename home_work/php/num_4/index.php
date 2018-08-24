@@ -1,6 +1,7 @@
 <?php
     $file = file_get_contents(__DIR__.'/phonebook.json');
     $obj = json_decode($file,true);
+    
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +23,8 @@
                     <td><? echo $arr['firstName'];?></td>
                     <td><? echo $arr['lastName'];?></td>
                     <td><? echo $arr['address'];?></td>
-                    <td><? echo $arr['phoneNumber'];?></td>
+                    <td><? foreach($arr['phoneNumber'] as $phone){
+                        echo "$phone <br />";}?></td>
                 </tr>
             <?php }?>
     </table>
