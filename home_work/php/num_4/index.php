@@ -22,7 +22,10 @@
                 <tr>
                     <td><? echo $arr['firstName'];?></td>
                     <td><? echo $arr['lastName'];?></td>
-                    <td><? echo $arr['address'];?></td>
+                    <td> 
+                        <?$addres = implode(", ", $arr['address']);
+                        echo $addres;?>
+                    </td>
                     <td><? foreach($arr['phoneNumber'] as $phone){
                         echo "$phone <br />";}?></td>
                 </tr>
