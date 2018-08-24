@@ -1,7 +1,11 @@
 <?php
+if (!empty($argv[1])){
 //Страны и режим въезда PHP Нетология
+    $country_csv = file_get_contents("https://data.gov.ru/opendata/7704206201-country/data-20180609T0649-structure-20180609T0649.csv?encoding=UTF-8");
+    //print_r($country_csv);
     $err = 0;
     $file = 'visa.csv';
+    file_put_contents($file, $country_csv);
     if (is_writable($file)){
         $fc = file('visa.csv');
         for ($i=0; $i<count($fc); $i++){
@@ -29,5 +33,7 @@
     } else {
         echo 'Ошибка чтения файла';
     }
-
+} else {
+    echo 'Нет данных для поиска';
+}
 ?>
