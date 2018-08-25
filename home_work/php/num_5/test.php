@@ -33,13 +33,15 @@ if (!empty($_GET)){
         <body>
             <p>Тест № <?echo $id;?></p>
             <form action="test.php" method="POST">
-            <fieldset>
-            <p><?echo $obj['description'];?></p>
-            <?for($j=0; $j<count($obj['answer']); $j++){
-                $answ = $obj['answer'][$j];?>
-                <label><input type="radio" name="<?echo $id?>" value="<?echo $j;?>"><?echo $answ;?></label>
+            <?foreach($obj as $key=>$test){?>
+                <fieldset>
+                    <p><?echo $test['description'];?></p>
+                    <?for($j=0; $j<count($test['answer']); $j++){
+                    $answ = $test['answer'][$j];?>
+                    <label><input type="radio" name="<?echo "$id,$key";?>" value="<?echo $j;?>"><?echo $answ;?></label>
                 <?}?>
-            </fieldset>
+                </fieldset>
+            <?}?>
             <input type="submit">
             </form>
         </body>
@@ -50,13 +52,17 @@ if (!empty($_GET)){
     }
 }
 if(!empty($_POST)){
-        foreach($_POST as $id=>$done){
-            $obj = get_test($id);
-            if ($done == $obj['done']){
-                echo 'Ответ верный';
-            }else {
-                echo 'Ответ не верный';
+        foreach($_POST as $id=>$done){ 
+            $arr = explode(",", $id);
+            $obj = get_test($arr[0]);
+            foreach($obj as $key=>$test){
+                if ($key == $arr[1] && $test['done'] == $done){
+                    $result .= "Ответ на вопрос ".($key+1). " верный<br />";
+                } elseif ($key == $arr[1] && $test['done'] != $done){
+                    $result .= "Ответ на вопрос ".($key+1). " не верный<br />";
+                }
             }
-        }    
+        } 
+        echo $result;   
 }
 ?>
