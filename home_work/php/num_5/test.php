@@ -46,7 +46,7 @@ if (!empty($_GET)){
             </form>
         </body>
         </html>
-    <?
+    <?php
     } else {
         echo 'Не верный запрос';
     }
@@ -64,5 +64,4 @@ if(!empty($_POST)){
             }
         } 
         echo $result;   
-}
-?>
+}?>

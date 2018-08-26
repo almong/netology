@@ -11,4 +11,5 @@
     }
     foreach($arr_test as $key => $value){?>
         <div><?echo $key;?> - <a href="test.php?id=<?echo $key;?>"><?echo $value;?></a></div>
-   <?};?>
+   <?php
+}?>

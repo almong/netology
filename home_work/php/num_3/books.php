@@ -5,9 +5,9 @@
         $code_str = urlencode($query);
         $json_str = file_get_contents("https://www.googleapis.com/books/v1/volumes?q=$code_str");
         $obj = json_decode($json_str);
-        json_last_error_msg();
+        if (json_last_error() == 'JSON_ERROR_NONE') {
         //print_r($obj);
-        $file = 'books.csv';
+        $file = __DIR__ . '/books.csv';
         $id = $obj->items[0]->id;
         $title = $obj->items[0]->volumeInfo->title;
         if (!isset($obj->items[0]->volumeInfo->authors[0])){
@@ -22,7 +22,11 @@
         } else {
             echo 'Ошибка открытия файла для записи';
         }
-    } else {
+        } else {
+            echo "Ошибка, обработки JSON\r\n";
+            // throw new UnexpectedValueException(json_last_error_msg());
+        } 
+    }else {
         echo 'Нет данных для поиска';
     }
 ?>
