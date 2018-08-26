@@ -6,33 +6,28 @@ if (!empty($argv[1])){
     file_put_contents($file, $country_csv);
     $err = 0;
     $ok = 0;
+    
     if (($fp = fopen($file, 'r')) !== FALSE){
         while (($data = fgetcsv($fp, 1000, ',')) !== FALSE){
             $lev = levenshtein($argv[1], $data[1]);
-
-            // echo $argv[1]." ", $data[1]." ";
-            // echo strcasecmp($argv[1], $data[1]). ' ';
-            //echo levenshtein($argv[1], $data[1])." ";
-
             if ($lev == 0){
-                    $ok = 1;
-                    $res = $data[1] . ': ' . $data[4] . "\r\n";
-                    break;
-                } elseif ($lev <= 1){
-                    $ok = 1;
-                    $res = $data[1] . ': ' . $data[4] . "\r\n";
-                } elseif ($lev <= 3 && $ok == 0){
-                    $ok = 1;
-                    $res = $data[1] . ': ' . $data[4] . "\r\n";
-                } else {
-                    $err = 1;
-                }
+                $ok = 1;
+                $res = $data[1] . ': ' . $data[4] . "\r\n";
+                break;
+            } elseif ($lev <= 1){
+                $ok = 1;
+                $res = $data[1] . ': ' . $data[4] . "\r\n";
+            } elseif ($lev <= 3 && $ok == 0){
+                $ok = 1;
+                $res = $data[1] . ': ' . $data[4] . "\r\n";
+            } else {
+                $err = 1;
             }
-        } else {
-            echo 'Ошибка чтения файла';
         }
+    } else {
+        echo 'Ошибка чтения файла';
+    }
     fclose($fp);
-
     if ($err == 1 && $ok == 0){
         echo "Ошибка ввода страны или страна не найдена\r\n";
     } else {
