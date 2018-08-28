@@ -1,3 +1,16 @@
+<?php
+    if (!empty($_FILES)){
+        if (array_key_exists('files', $_FILES)){
+            if (move_uploaded_file($_FILES['files']['tmp_name'], $_FILES['files']['name'])){
+                //Перенаправляем на страницу списка тестов
+                header('Location: /list.php');
+            } else {
+                echo 'ошибка загрузки';
+            }
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -12,16 +25,3 @@
     </form>
 </body>
 </html>
-
-<?php
-    if (!empty($_FILES)){
-        if (array_key_exists('files', $_FILES)){
-            if (move_uploaded_file($_FILES['files']['tmp_name'], $_FILES['files']['name'])){
-                //Перенаправляем на страницу списка тестов
-                header('Location: /list.php');
-            } else {
-                echo 'ошибка загрузки';
-            }
-        }
-    }
-?>
