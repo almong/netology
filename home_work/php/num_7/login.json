@@ -1,0 +1,17 @@
+[
+    {
+        "login": "admin",
+        "password": "1234",
+        "name": "Александр Глухов"
+    },
+    {
+        "login": "ivan",
+        "password": "321",
+        "name": "Иванов Иван"
+    },
+    {
+        "login": "petr",
+        "password": "9874",
+        "name": "Петров Петр"
+    }
+]
