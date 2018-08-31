@@ -5,7 +5,7 @@
     if (!empty($_SESSION['user_login'])){
     if (!empty($_FILES)){
         if (array_key_exists('files', $_FILES)){
-            if (move_uploaded_file($_FILES['files']['tmp_name'], $_FILES['files']['name'])){
+            if (move_uploaded_file($_FILES['files']['tmp_name'], __DIR__.'/tests/'. $_FILES['files']['name'])){
                 //Перенаправляем на страницу списка тестов
                 header('Location: /list.php');
             } else {
