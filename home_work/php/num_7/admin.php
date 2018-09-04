@@ -7,7 +7,8 @@
         if (array_key_exists('files', $_FILES)){
             if (move_uploaded_file($_FILES['files']['tmp_name'], __DIR__.'/tests/'. $_FILES['files']['name'])){
                 //Перенаправляем на страницу списка тестов
-                header('Location: /list.php');
+                header('Location: list.php');
+                exit;
             } else {
                 echo 'Ошибка загрузки';
             }

@@ -20,6 +20,7 @@
         <div><?php echo $key;?> - <a href="/test.php?id=<?php echo $key;?>"><?php echo $value;?></a></div>
    <?php }} else {
        http_response_code(403);
+       exit;
    }
    if (!empty($_SESSION['user_login'])){
    ?>

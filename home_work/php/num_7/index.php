@@ -5,11 +5,12 @@
     if ($_SESSION['attempt'] >= 11){
         http_response_code(403);
         echo 'Подождите часок, мы вас заблокировали, а затем попробуйте снова';
-        die;
+        exit;
     }
 
     if (!empty($_SESSION['guest']) || !empty($_SESSION['user_login'])){
-        header('Location: /list.php');
+        header('Location: list.php');
+        exit;
     } else {
     if (!empty($_POST)){
         $errors = [];
@@ -40,7 +41,7 @@
                             $_SESSION['attempt']++;
                             echo '<a href="/">Назад</a><br>';
                             echo 'Доступ закрыт';  
-                            die;            
+                            exit;            
                         } 
                     } else {
                         $_SESSION['user_login'] = $_POST['login'];    
@@ -52,15 +53,17 @@
                 $_SESSION['attempt']++;
                 echo '<a href="/">Назад</a><br>';
                 echo 'Доступ закрыт';
-                die;
+                exit;
             } else {
-                header('Location: /list.php');
+                header('Location: list.php');
+                exit;
             }
         } else {
             if ($_POST['guest'] == 'on'){
                 $_SESSION['guest'] = $_POST['login'];
                 unset ($_SESSION['attempt']);
-                header('Location: /list.php');
+                header('Location: list.php');
+                exit;
             }
         }
     }

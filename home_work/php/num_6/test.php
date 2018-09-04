@@ -24,7 +24,8 @@ if (!empty($_GET)){
         $id = $_GET['id'];
         $obj = get_test($id);
         if ($obj == null){
-            header('HTTP/1.1 404 Not found');
+            http_response_code(404);
+            exit;
         } else {
         ?>
         <!DOCTYPE html>
