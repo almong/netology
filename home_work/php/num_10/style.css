@@ -1,0 +1,21 @@
+.auth {
+    width: 300px;
+    /* height: 100px; */
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.auth p {
+    text-align: center;
+}
+
+.auth a {
+    color: #000000;
+}
+
+.auth button {
+    width: 90px;
+    height: 30px;
+}
