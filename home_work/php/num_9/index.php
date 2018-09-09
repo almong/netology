@@ -3,7 +3,11 @@
 
     function search($name1, $name2, $name3, $get, $db)
         {
-            $sql = "SELECT * FROM books WHERE `$name1` LIKE '%{$get['name']}%' AND `$name2` LIKE '%{$get[author]}%' AND `$name3` LIKE '%{$get['isbn']}%'";
+            $values = [];
+            $values[$name1] = (!empty($get[$name1])) ? $get[$name1] : '';
+            $values[$name2] = (!empty($get[$name2])) ? $get[$name2] : '';
+            $values[$name3] = (!empty($get[$name3])) ? $get[$name3] : '';
+            $sql = "SELECT * FROM books WHERE `$name1` LIKE '%{$values[$name1]}%' AND `$name2` LIKE '%{$values[$name2]}%' AND `$name3` LIKE '%{$values[$name3]}%'";
             $preSql = $db->prepare($sql);
             $preSql->execute();
             return ($preSql->fetchALL(PDO::FETCH_ASSOC));  
@@ -31,29 +35,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Реляционные базы данных и SQL</title>
-    <style type="text/css">
-    table { 
-        margin-top: 20px;
-        border-spacing: 0;
-        border-collapse: collapse;
-    }
-
-    table td, table th {
-        border: 1px solid #ccc;
-        padding: 5px;
-    }
-    
-    table th {
-        background: #eee;
-    }
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Библиотека успешного человека</h1>
     <form method="GET">
-        <input type="text" name="isbn" placeholder="ISBN" value="" />
-        <input type="text" name="name" placeholder="Название книги" value="" />
-        <input type="text" name="author" placeholder="Автор книги" value="" />
+        <input type="text" name="isbn" placeholder="ISBN" value="<?php echo $_GET['isbn'];?>">
+        <input type="text" name="name" placeholder="Название книги" value="<?php echo $_GET['name'];?>">
+        <input type="text" name="author" placeholder="Автор книги" value="<?php echo $_GET['author'];?>">
         <input type="submit" value="Поиск" />
     </form>
     <table>
@@ -68,20 +57,11 @@
         </thead>
         <tbody>
         <?php 
-            if (empty($_GET)){
-                $result = dbPrint($db);
-                foreach($result as $row){ 
-                    table($row);
-                }
-        } else {
-                if (!empty($_GET)){
-                    $searchAll = search('name', 'author', 'isbn', $_GET, $db);
-                }
-                if (!empty($searchAll)){
-                    foreach ($searchAll as $row){
-                        table($row);               
-                    } 
-                }
+            $searchAll = search('name', 'author', 'isbn', $_GET, $db);
+            if (!empty($searchAll)){
+                foreach ($searchAll as $row){
+                    table($row);               
+                } 
             }
         $db = null;
         ?>
