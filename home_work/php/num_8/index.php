@@ -74,19 +74,19 @@
     }
     }
     
-    $car_1 = new Car('BMW', '525i', 'Black', 10000);
-    $car_2 = new Car('Audi', 'Q7', 'White', 12000);
+    $car1 = new Car('BMW', '525i', 'Black', 10000);
+    $car2 = new Car('Audi', 'Q7', 'White', 12000);
 
-    $tv_1 = new Tv('LG', 'W345', 42, 2000);
-    $tv_2 = new Tv('Sony', 'F22', 22, 1000);
+    $tv1 = new Tv('LG', 'W345', 42, 2000);
+    $tv2 = new Tv('Sony', 'F22', 22, 1000);
 
-    $ballPen_1 = new BallPen('Parker', 'Black', 700);
-    $ballPen_2 = new BallPen('NoName', 'Blue', 5);
+    $ballPen1 = new BallPen('Parker', 'Black', 700);
+    $ballPen2 = new BallPen('NoName', 'Blue', 5);
 
-    $duck_1 = new Duck(2,5,10);
-    $duck_2 = new Duck(3,8,15);
+    $duck1 = new Duck(2,5,10);
+    $duck2 = new Duck(3,8,15);
 
-    $product_1 = new Product('Изодента', 'Хохтовары', 1);
-    $product_2 = new Product('Мотоко', 'Продукты питания', 5);
+    $product1 = new Product('Изодента', 'Хохтовары', 1);
+    $product2 = new Product('Мотоко', 'Продукты питания', 5);
 
 ?>
