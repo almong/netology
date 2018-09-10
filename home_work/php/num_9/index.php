@@ -1,23 +1,17 @@
  <?php
     require_once 'db.php';
 
-    function search($name1, $name2, $name3, $get, $db)
+    $values = [];
+    $values['name'] = (!empty($_GET['name'])) ? $_GET['name'] : '';
+    $values['author'] = (!empty($_GET['author'])) ? $_GET['author'] : '';
+    $values['isbn'] = (!empty($_GET['isbn'])) ? $_GET['isbn'] : '';
+
+    function search($values, $get, $db)
         {
-            $values = [];
-            $values[$name1] = (!empty($get[$name1])) ? $get[$name1] : '';
-            $values[$name2] = (!empty($get[$name2])) ? $get[$name2] : '';
-            $values[$name3] = (!empty($get[$name3])) ? $get[$name3] : '';
-            $sql = "SELECT * FROM books WHERE `$name1` LIKE '%{$values[$name1]}%' AND `$name2` LIKE '%{$values[$name2]}%' AND `$name3` LIKE '%{$values[$name3]}%'";
+            $sql = "SELECT * FROM books WHERE `name` LIKE '%{$values['name']}%' AND `author` LIKE '%{$values['author']}%' AND `isbn` LIKE '%{$values['isbn']}%'";
             $preSql = $db->prepare($sql);
             $preSql->execute();
             return ($preSql->fetchALL(PDO::FETCH_ASSOC));  
-        }
-    
-        function dbPrint($db)
-        {
-            $dbAll = $db->prepare('SELECT * from books');
-            $dbAll->execute();
-            return ($dbAll->fetchALL(PDO::FETCH_ASSOC));
         }
 
         function table($row){?>
@@ -40,9 +34,9 @@
 <body>
     <h1>Библиотека успешного человека</h1>
     <form method="GET">
-        <input type="text" name="isbn" placeholder="ISBN" value="<?php echo $_GET['isbn'];?>">
-        <input type="text" name="name" placeholder="Название книги" value="<?php echo $_GET['name'];?>">
-        <input type="text" name="author" placeholder="Автор книги" value="<?php echo $_GET['author'];?>">
+        <input type="text" name="isbn" placeholder="ISBN" value="<?php echo $values['isbn'];?>">
+        <input type="text" name="name" placeholder="Название книги" value="<?php echo $values['name'];?>">
+        <input type="text" name="author" placeholder="Автор книги" value="<?php echo $values['author'];?>">
         <input type="submit" value="Поиск" />
     </form>
     <table>
@@ -57,7 +51,7 @@
         </thead>
         <tbody>
         <?php 
-            $searchAll = search('name', 'author', 'isbn', $_GET, $db);
+            $searchAll = search($values, $_GET, $db);
             if (!empty($searchAll)){
                 foreach ($searchAll as $row){
                     table($row);               
