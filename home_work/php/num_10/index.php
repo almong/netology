@@ -1,9 +1,9 @@
 <?php
-    require "includes/db.php";
+    session_start();
+
     if (isset($_SESSION['logged_user'])) {
-        echo 'Пользователь ' . $_SESSION['logged_user']->login . ' успешно авторизован!<br/>';?>
-    <a href="logout.php">Выйти</a>
-    <?php    
+        header('LOCATION: task.php'); 
+        die; 
     } else {
     ?>
 
@@ -22,4 +22,6 @@
 </body>
 </html>
 
-    <?php }?>
+    <?php 
+        }
+    ?>

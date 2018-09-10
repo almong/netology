@@ -1,6 +1,27 @@
 <?php
 //Соединение с БД
-    require "includes/db.php";
+    require 'db.php';
+//Функция проверки на логина на уникальность
+    function uniqLogin($login, $db)
+    {
+        $sql = "SELECT id FROM user WHERE `login` = '$login'";
+        $preSql = $db->prepare($sql);
+        $preSql->execute();
+
+        if ($preSql->fetchALL(PDO::FETCH_ASSOC)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+//Функция записи логина/пароля в БД
+    function singup($login, $password, $db)
+    {
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO user(login, password) VALUE ('$login', '$password')";
+        $preSql = $db->prepare($sql);
+        $preSql->execute();
+    }
 // Проверяем введены ли данные в форму
     if (!empty($_POST)){
         $errors = array();
@@ -12,21 +33,20 @@
         if ($_POST['password'] == ''){
             $errors[] = 'Введите пароль!';
         } 
-//Проверяем на уникальность логина и email
-        if ( R::count('user', "login = ?", array($_POST['login'])) > 0 ){
+//Проверка логина на уникальность
+        if (uniqLogin($_POST['login'], $db)){
             $errors[] = 'Пользователь с таким логином уже существует';
         }
 // Если ошибок нет то добавляем в БД запись о пользователе.
         if (empty($errors)){
-            $user = R::dispense('user');
-            $user->login = $_POST['login'];
-            $user->password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-            R::store($user);
-            echo '<div style="color: green; text-align: center;">Вы успешно зарегистрированны!</div><hr>';
+            singup($_POST['login'], $_POST['password'], $db);
+            header('LOCATION: login.php');  
+            die; 
         } else {
             echo '<div style="color: red; text-align: center;">'.array_shift($errors).'</div><hr>';
         }
     }
+    $db = null;
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +59,7 @@
 <body>
 <div class="auth">
 <!-- Добавляем форму регистрации -->
-    <form action="signup.php" method="post">
+    <form method="post">
         <p>Регистрация</p>
         <p>Введите логин: <input type="text" name="login" value ="<?echo @$_POST['login']?>"></p>
         <p>Введите пароль: <input type="password" name="password"></p>

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $user = 'admin';
     $pass = '';
     $options = array(
