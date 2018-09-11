@@ -1,4 +1,8 @@
 <?php
+    if (empty($_SESSION['logged_user'])){
+        http_response_code(403);
+    die;
+    } else {
 
     function changeState($state, $taskId, $user_id, $db)
     {
@@ -90,4 +94,5 @@
         $sql = "DELETE FROM task WHERE user_id='$id' AND id='$idTask' LIMIT 1";
         $preSql = $db->prepare($sql);
         $preSql->execute();
+    }
     }

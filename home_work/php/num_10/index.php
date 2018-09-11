@@ -7,20 +7,20 @@
     } else {
     ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="auth">
-    <p><a href="/login.php">Авторизация</a></p>
-    <p><a href="/signup.php">Регистрация</a></p>   
-</div>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>ToDo List</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="auth">
+        <p><a href="/login.php">Авторизация</a></p>
+        <p><a href="/signup.php">Регистрация</a></p>   
+    </div>
+    </body>
+    </html>
 
     <?php 
         }

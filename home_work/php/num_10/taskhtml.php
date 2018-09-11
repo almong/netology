@@ -1,3 +1,9 @@
+<?php 
+    if (empty($_SESSION['logged_user'])){
+        http_response_code(403);
+    die;
+    } else {
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -37,3 +43,4 @@
         </table>
 </body>
 </html>
+<?php } ?>
