@@ -6,7 +6,7 @@
     );
 
     try {
-        $db = new PDO('mysql:host=localhost;dbname=todo', $user, $pass, $options);
+        $db = new PDO('mysql:host=localhost;dbname=testdb', $user, $pass, $options);
     } catch (PDOException $e) {
         echo "Error!: " . $e->getMessage() . "<br/>";
         die();
