@@ -3,7 +3,6 @@
  
     function change($post, $db)
     {
-        print_r($post);
         if ($post['type'] == 'varchar'){
             $post['type'] = 'varchar(50)';
         }
