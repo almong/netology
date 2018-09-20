@@ -5,7 +5,7 @@
         $preSql = $db->prepare($sql);
         $preSql->execute(); 
         $err = $preSql->errorInfo();
-        if (!empty($err)){
+        if (!empty($err[2])){
             echo 'Некорректное имя таблицы или таблица с таким именем существует';
         } 
     }
