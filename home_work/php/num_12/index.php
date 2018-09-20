@@ -17,7 +17,6 @@
         include 'model/add.php';
         addTable($_GET['nameTable'], $db);   
     }
-
         
     $listTables = showDb($db);
 
@@ -26,18 +25,9 @@
     }
 
     if (isset(($_GET['edit']))){
-        $info = infoTable($_GET['table'], $db);
-        foreach ($info as $row){
-            if ($row['Field'] == $_GET['edit']){
-                $type = strstr ($row['Type'], '(' , true);
-                if ($type == ''){
-                    $type = $row['Type'];
-                }
-            }
-        }
+        $infoE = infoTable($_GET['table'], $db); 
     }
-                $typeArr = ['int', 'varchar', 'float'];
+    
     include 'view/view.php';
 
     $db = null;
-
