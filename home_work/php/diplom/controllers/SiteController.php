@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\QuestionForm;
 
 class SiteController extends Controller
 {
@@ -125,4 +126,21 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionQuestion()
+        {
+            $model = new QuestionForm();
+
+            if ($model->load(Yii::$app->request->post()) && $model->validate()){
+                //Данные удачно проверены
+                //Записываем данные в БД
+
+                return $this->render('question-confirm', ['model' => $model]);
+            } else {
+                //Либо есть ошибка, либо страница отображается первый раз
+
+                return $this->render('question', ['model' => $model]);
+            }
+        }
+    
 }
