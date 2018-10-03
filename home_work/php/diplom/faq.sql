@@ -30,17 +30,16 @@ CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
   `login` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `e-mail` varchar(255) DEFAULT NULL,
-  `token` varchar(255) DEFAULT NULL
+  `email` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `categoria`
+-- Структура таблицы `category`
 --
 
-CREATE TABLE `categoria` (
+CREATE TABLE `category` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -53,10 +52,10 @@ CREATE TABLE `categoria` (
 
 CREATE TABLE `question` (
   `id` int(11) NOT NULL,
-  `id_categorie` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
   `question` text NOT NULL,
   `answer` text NOT NULL,
-  `id_user` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `status` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -70,7 +69,7 @@ CREATE TABLE `question` (
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `e-mail` varchar(255) NOT NULL
+  `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -86,7 +85,7 @@ ALTER TABLE `admin`
 --
 -- Индексы таблицы `categoria`
 --
-ALTER TABLE `categoria`
+ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -113,7 +112,7 @@ ALTER TABLE `admin`
 --
 -- AUTO_INCREMENT для таблицы `categoria`
 --
-ALTER TABLE `categoria`
+ALTER TABLE `category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT для таблицы `question`
