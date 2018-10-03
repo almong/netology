@@ -10,7 +10,13 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\QuestionForm;
+use app\models\User;
+use app\models\Question;
 
+/**
+ * Class SiteController
+ * @package app\controllers
+ */
 class SiteController extends Controller
 {
     /**
@@ -127,20 +133,45 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
+    /**
+     * @return string
+     */
     public function actionQuestion()
-        {
-            $model = new QuestionForm();
+    {
+        $model = new QuestionForm();
 
-            if ($model->load(Yii::$app->request->post()) && $model->validate()){
-                //Данные удачно проверены
-                //Записываем данные в БД
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+    //Данные удачно проверены
+    //Записываем данные в БД
+            $user = new User();
+            $question = new Question();
 
-                return $this->render('question-confirm', ['model' => $model]);
+            $finduser = User::find()->where(['name' => $model->name])->andWhere(['email' => $model->email])->one();
+            if ($finduser) {
+                /**
+                 *  что делать если пользователь уже существет, в БД писать его не надо, а вопрос надо записать в БД
+                 */
+                die;
             } else {
-                //Либо есть ошибка, либо страница отображается первый раз
+                $user->name = $model->name;
+                $user->email = $model->email;
+                $user->save();
 
-                return $this->render('question', ['model' => $model]);
+                $user_id = User::find()->select('id')->where(['name' => $model->name]);
+
+                $question->category_id = 1;
+                $question->question = $model->question;
+                $question->user_id = $user_id;
+                $question->status = 'new';
+                $question->save();
             }
+
+            return $this->render('question-confirm', ['model' => $model]);
+        } else {
+            //Либо есть ошибка, либо страница отображается первый раз
+
+            return $this->render('question', ['model' => $model]);
         }
-    
+    }
+
 }

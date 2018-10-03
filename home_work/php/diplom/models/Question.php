@@ -5,9 +5,10 @@ namespace app\models;
 use yii\db\ActiveRecord;
 
 /**
- * Class User
+ * Class Question
  * @package app\models
  */
-class User extends ActiveRecord
+class Question extends ActiveRecord
 {
+
 }
