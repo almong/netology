@@ -2,8 +2,6 @@
 
 namespace app\models;
 
-use Yii;
-
 /**
  * This is the model class for table "user".
  *
@@ -20,7 +18,6 @@ class User extends \yii\db\ActiveRecord
     {
         return 'user';
     }
-
     /**
      * {@inheritdoc}
      */
@@ -31,7 +28,6 @@ class User extends \yii\db\ActiveRecord
             [['name', 'email'], 'string', 'max' => 255],
         ];
     }
-
     /**
      * {@inheritdoc}
      */

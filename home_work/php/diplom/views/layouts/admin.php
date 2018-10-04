@@ -11,6 +11,10 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
+
+if (Yii::$app->user->isGuest) {
+    echo 'не авторизованы';
+} else {
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -38,11 +42,13 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Home', 'url' => ['/admin/default/index']],
+            ['label' => 'Admins', 'url' => ['/admin/admin/index']],
+            ['label' => 'Users', 'url' => ['/admin/user/index']],
+            ['label' => 'Questions', 'url' => ['/admin/question/index']],
+            ['label' => 'Category', 'url' => ['/admin/category/index']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/auth/login']]
+            ['label' => 'Login', 'url' => ['/auth/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/auth/logout'], 'post')
@@ -79,3 +85,4 @@ AppAsset::register($this);
 </body>
 </html>
 <?php $this->endPage() ?>
+<?php } ?>

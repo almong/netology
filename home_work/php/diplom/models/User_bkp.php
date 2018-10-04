@@ -2,7 +2,11 @@
 
 namespace app\models;
 
-class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
+/**
+ * Class User
+ * @package app\models
+ */
+class User_bkp extends \yii\base\BaseObject implements \yii\web\IdentityInterface
 {
     public $id;
     public $username;
