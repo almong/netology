@@ -37,6 +37,7 @@
 127.0.0.1 - - [02/Oct/2018:22:25:53 +0300] "GET /assets/3496bc3f/jquery.js HTTP/1.1" 304 0 "http://test.local/index.php?r=site%2Fquestion" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
 127.0.0.1 - - [02/Oct/2018:22:25:53 +0300] "GET /assets/821710e9/yii.js HTTP/1.1" 304 0 "http://test.local/index.php?r=site%2Fquestion" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
 127.0.0.1 - - [02/Oct/2018:22:25:53 +0300] "GET /index.php?r=debug%2Fdefault%2Ftoolbar&tag=5bb3c641ad165 HTTP/1.1" 200 3347 "http://test.local/index.php?r=site%2Fquestion" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+<<<<<<< Updated upstream
 127.0.0.1 - - [03/Oct/2018:11:45:45 +0300] "GET / HTTP/1.1" 200 8058 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
 127.0.0.1 - - [03/Oct/2018:11:45:45 +0300] "GET /assets/a503d7c8/css/bootstrap.css HTTP/1.1" 200 146010 "http://test.local/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
 127.0.0.1 - - [03/Oct/2018:11:45:45 +0300] "GET /css/site.css HTTP/1.1" 200 1842 "http://test.local/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
@@ -1003,3 +1004,13 @@
 127.0.0.1 - - [04/Oct/2018:17:08:28 +0300] "GET /index.php?r=debug%2Fdefault%2Ftoolbar&tag=5bb61edccffcc HTTP/1.1" 200 3442 "http://test.local/index.php?r=admin%2Fquestion%2Findex" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
 127.0.0.1 - - [04/Oct/2018:17:08:29 +0300] "GET /index.php?r=admin%2Fcategory%2Findex HTTP/1.1" 200 8261 "http://test.local/index.php?r=admin%2Fquestion%2Findex" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
 127.0.0.1 - - [04/Oct/2018:17:08:30 +0300] "GET /index.php?r=debug%2Fdefault%2Ftoolbar&tag=5bb61edde360b HTTP/1.1" 200 3443 "http://test.local/index.php?r=admin%2Fcategory%2Findex" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+=======
+127.0.0.1 - - [04/Oct/2018:19:31:59 +0300] "GET / HTTP/1.1" 200 8058 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+127.0.0.1 - - [04/Oct/2018:19:31:59 +0300] "GET /assets/76545905/css/bootstrap.css HTTP/1.1" 304 0 "http://test.local/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+127.0.0.1 - - [04/Oct/2018:19:31:59 +0300] "GET / HTTP/1.1" 200 8062 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+127.0.0.1 - - [04/Oct/2018:19:31:59 +0300] "GET /assets/3496bc3f/jquery.js HTTP/1.1" 304 0 "http://test.local/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+127.0.0.1 - - [04/Oct/2018:19:31:59 +0300] "GET /assets/76545905/js/bootstrap.js HTTP/1.1" 304 0 "http://test.local/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+127.0.0.1 - - [04/Oct/2018:19:31:59 +0300] "GET /assets/821710e9/yii.js HTTP/1.1" 304 0 "http://test.local/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+127.0.0.1 - - [04/Oct/2018:19:31:59 +0300] "GET /index.php?r=debug%2Fdefault%2Ftoolbar&tag=5bb6407f53373 HTTP/1.1" 200 3345 "http://test.local/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+127.0.0.1 - - [04/Oct/2018:19:31:59 +0300] "GET /favicon.ico HTTP/1.1" 200 318 "http://test.local/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+>>>>>>> Stashed changes
