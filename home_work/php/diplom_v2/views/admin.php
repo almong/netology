@@ -6,16 +6,16 @@ include 'header.php';
 <section class="d-flex flex-row bd-highlight mb-3">
     <ul class="nav flex-column col-2 p-2 bd-highlight">
         <li class="nav-item">
-            <a class="nav-link active" href="/admin/showAll">Список админов</a>
+            <a class="nav-link active" href="/Admin/showAll">Список админов</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/category/showAll">Список тем</a>
+            <a class="nav-link" href="/Category/showAll">Список тем</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/question/showAll">Список вопросов</a>
+            <a class="nav-link" href="/Question/showAll">Список вопросов</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/user/showAll">Список пользователей</a>
+            <a class="nav-link" href="/User/showAll">Список пользователей</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/logout">Выйти</a>

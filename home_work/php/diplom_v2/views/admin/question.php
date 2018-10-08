@@ -1,4 +1,4 @@
-<a href="/admin/add" class="badge badge-success">Add</a>
+<a href="/Question/add" class="badge badge-success">Add</a>
 <table class="table">
     <thead class="thead-dark">
     <tr>
@@ -24,8 +24,8 @@
             <td><?= $row['date']?></td>
             <td><?= $row['status']?></td>
             <td>
-                <a href="/admin/update" class="badge badge-primary">Edit</a>
-                <a href="/admin/delete" class="badge badge-danger">Delete</a>
+                <a href="/Question/update" class="badge badge-primary">Edit</a>
+                <a href="/Question/delete" class="badge badge-danger">Delete</a>
             </td>
         </tr>
     <?php } ?>

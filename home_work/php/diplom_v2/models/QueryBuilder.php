@@ -36,9 +36,8 @@ class QueryBuilder
 
     public function delete($table, $id)
     {
-        $query = "DELETE FROM $table WHERE 'id' = :id";
+        $query = "DELETE FROM `$table` WHERE `id` = $id";
         $statement = $this->db->prepare($query);
-        $statement->bindParam(':id',$id);
         $statement->execute();
     }
 
