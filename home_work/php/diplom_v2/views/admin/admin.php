@@ -1,4 +1,4 @@
-<a href="/Admin/add" class="badge badge-success">Add</a>
+<a href="/Admin/add?id=<?= $row['id']?>" class="badge badge-success">Add</a>
 <table class="table">
     <thead class="thead-dark">
     <tr>
@@ -16,8 +16,8 @@
             <td><?= $row['login']?></td>
             <td><?= $row['password']?></td>
             <td>
-                <a href="/Admin/update" class="badge badge-primary">Update</a>
-                <a href="/Admin/delete" class="badge badge-danger">Delete</a>
+                <a href="/Admin/update?id=<?= $row['id']?>" class="badge badge-primary">Edit</a>
+                <a href="/Admin/delete?id=<?= $row['id']?>" class="badge badge-danger">Delete</a>
             </td>
         </tr>
     <?php } ?>

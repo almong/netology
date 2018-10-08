@@ -33,7 +33,7 @@ switch ($action){
         break;
     case 'delete':
         $obj->$action($table, $param['id']);
-//        header("Location: /{$nameClass}/showAll");
+        header("Location: /{$nameClass}/showAll");
         break;
     case 'add':
         break;
