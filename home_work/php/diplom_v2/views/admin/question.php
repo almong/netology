@@ -25,7 +25,7 @@
             <td><?= $row['status']?></td>
             <td>
                 <a href="/Question/update" class="badge badge-primary">Edit</a>
-                <a href="/Question/delete" class="badge badge-danger">Delete</a>
+                <a href="/Question/delete?id=<?= $row['id']?>" class="badge badge-danger">Delete</a>
             </td>
         </tr>
     <?php } ?>
