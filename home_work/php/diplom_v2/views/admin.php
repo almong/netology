@@ -1,10 +1,31 @@
 <?php
+session_start();
 include 'header.php';
 ?>
-
-<section>
-    <h1 class="h1 text-center">Административная панель</h1>
-    <a class="btn btn-primary" href="/logout" role="button">Выход</a>
+<h1 class="h1 text-center">Административная панель</h1>
+<section class="d-flex flex-row bd-highlight mb-3">
+    <ul class="nav flex-column col-2 p-2 bd-highlight">
+        <li class="nav-item">
+            <a class="nav-link active" href="/admin/showAll">Список админов</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/category/showAll">Список тем</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/question/showAll">Список вопросов</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/user/showAll">Список пользователей</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/logout">Выйти</a>
+        </li>
+    </ul>
+    <div class="p-2 bd-highlight col">
+        <?php
+            include 'admin/'.lcfirst($nameClass).'.php';
+        ?>
+    </div>
 </section>
 
 <?php

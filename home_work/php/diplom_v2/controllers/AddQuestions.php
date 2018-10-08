@@ -6,7 +6,7 @@ $query = new QueryBuilder();
 
 if (!empty($_POST['name'] && !empty($_POST['question']))){
     addQuestion($query, $_POST);
-//    header('Location: /');
+    header('Location: /');
 }
 
 $categorys = $query->showAll('category');

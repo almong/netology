@@ -1,4 +1,10 @@
 <?php
+include 'QueryBuilder.php';
+
+class Question extends  QueryBuilder
+{
+
+}
 
 function addQuestion($query, $post)
 {
@@ -15,6 +21,3 @@ function addQuestion($query, $post)
     $col = "`category_id`, `question`, `user_id`, `status`";
     $query->add('question', $col, $data);
 }
-
-
-

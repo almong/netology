@@ -1,5 +1,10 @@
 <?php
+
 include 'QueryBuilder.php';
+
+class Admin extends QueryBuilder
+{
+}
 
 class Auth extends QueryBuilder
 {
@@ -27,5 +32,8 @@ class Auth extends QueryBuilder
         return $this->getId('admin', 'password', $this->password);
     }
 }
+
+
+
 
 
