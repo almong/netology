@@ -43,13 +43,9 @@ class QueryBuilder
 
     public function add($table, $col, $data)
     {
-        try {
         $query = "INSERT INTO `$table`($col) VALUES ($data)";
         $statement = $this->db->prepare($query);
         $statement->execute();
-        } catch (PDOException $e) {
-            echo "Error!: " . $e->getMessage() . "<br/>";
-            die();}
     }
 
     public function getId($table, $col, $value)
