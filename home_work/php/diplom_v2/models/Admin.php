@@ -4,14 +4,7 @@ include 'QueryBuilder.php';
 
 class Admin extends QueryBuilder
 {
-    public function addUser($post){
-        {
-            $query = $this->connectDb();
-            $col = "`login`, `password`";
-            $data = "'{$post['login']}', '{$post['password']}'";
-            $query->add('admin', $col, $data);
-        }
-    }
+
 }
 
 class Auth extends QueryBuilder

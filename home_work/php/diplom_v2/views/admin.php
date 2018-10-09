@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 include 'header.php';
 ?>
 <h1 class="h1 text-center">Административная панель</h1>

@@ -1,4 +1,3 @@
-<a href="/Question/add" class="badge badge-success">Add</a>
 <table class="table">
     <thead class="thead-dark">
     <tr>
@@ -18,3 +17,7 @@
     ?>
     </tbody>
 </table>
+<?php
+if ($action == 'showAll') {?>
+    <a href="/Question/add" class="btn btn-primary">Добавить</a>
+<?php } ?>

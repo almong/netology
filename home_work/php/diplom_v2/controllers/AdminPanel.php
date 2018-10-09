@@ -1,14 +1,7 @@
 <?php
 
-//include '../models/';
-
-$link = ltrim($_SERVER['REQUEST_URI'], '/');
-$arrLink = explode('/', $link);
-$nameClass = $arrLink[0];
-empty($_SERVER['QUERY_STRING']) ?  $action = $arrLink[1] : $action = stristr($arrLink[1], '?', true);
-$table = lcfirst($nameClass);
-
-$queryString = $_SERVER['QUERY_STRING'];
+include '../models/ParserQuery.php';
+include "../models/QueryBuilder.php";
 
 function parser($queryString)
 {
@@ -22,24 +15,40 @@ function parser($queryString)
     return $param;
 }
 
+$obj = new QueryBuilder();
+
+//Переменные
+$queryString = $_SERVER['QUERY_STRING'];
+$link = ltrim($_SERVER['REQUEST_URI'], '/');
+$arrLink = explode('/', $link);
+$nameClass = $arrLink[0];
+empty($_SERVER['QUERY_STRING']) ?  $action = $arrLink[1] : $action = stristr($arrLink[1], '?', true);
+$table = lcfirst($nameClass);
 $param = parser($queryString);
 
+if (isset($_POST)) {
+    $parserPost = new ParserQuery($_POST);
+    $data = $parserPost->getData();
+    $col = $parserPost->getCol();
+}
 
-include "../models/{$nameClass}.php";
-$obj = new $nameClass();
 
 switch ($action){
     case 'showAll':
         $values = $obj->$action($table);
         break;
     case 'update':
+        $editData = $obj->showOne($table, $param['id']);
         break;
     case 'delete':
         $obj->$action($table, $param['id']);
         header("Location: /{$nameClass}/showAll");
         break;
     case 'add':
-//        $obj->$action($table, $col, $data);
+        if (!empty($data)) {
+            $obj->$action($table, $col, $data);
+            header("Location: /{$nameClass}/showAll");
+        }
         break;
 }
 

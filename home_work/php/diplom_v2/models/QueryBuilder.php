@@ -27,9 +27,8 @@ class QueryBuilder
 
     public function showOne($table, $id)
     {
-        $query = "SELECT * FROM $table WHERE 'id' = :id";
+        $query = "SELECT * FROM `$table` WHERE `id` = $id";
         $statement = $this->db->prepare($query);
-        $statement->bindParam(':id',$id);
         $statement->execute();
         return $statement->fetch(PDO::FETCH_ASSOC);
     }
@@ -55,6 +54,14 @@ class QueryBuilder
         $statement->execute();
         $id = $statement->fetch()[0];
         return $id;
+    }
+
+    public function getCol($table, $col)
+    {
+        $query = "SELECT $col FROM `$table`";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
 }
