@@ -24,7 +24,7 @@ include 'header.php';
     <div class="p-2 bd-highlight col">
         <?php
             if (isset($nameClass)) {
-                include 'admin/'.lcfirst($nameClass).'.php';
+                include 'AdminPanel/'.lcfirst($nameClass).'.php';
             }
         ?>
     </div>

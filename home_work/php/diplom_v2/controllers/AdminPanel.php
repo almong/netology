@@ -1,5 +1,7 @@
 <?php
 
+//include '../models/';
+
 $link = ltrim($_SERVER['REQUEST_URI'], '/');
 $arrLink = explode('/', $link);
 $nameClass = $arrLink[0];
@@ -7,6 +9,7 @@ empty($_SERVER['QUERY_STRING']) ?  $action = $arrLink[1] : $action = stristr($ar
 $table = lcfirst($nameClass);
 
 $queryString = $_SERVER['QUERY_STRING'];
+
 function parser($queryString)
 {
     $param = [];
@@ -36,6 +39,7 @@ switch ($action){
         header("Location: /{$nameClass}/showAll");
         break;
     case 'add':
+//        $obj->$action($table, $col, $data);
         break;
 }
 
