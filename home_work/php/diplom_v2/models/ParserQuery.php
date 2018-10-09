@@ -10,8 +10,7 @@ class ParserQuery
     public $question;
     public $status;
     public $category;
-
-
+    public $answer;
 
     public function __construct($post)
     {
@@ -23,6 +22,7 @@ class ParserQuery
         $this->question = $post['question'];
         $this->status = $post['status'];
         $this->category = $post['category'];
+        $this->answer = $post['answer'];
     }
 
     public function getCol()
@@ -36,13 +36,13 @@ class ParserQuery
     {
         if ($this->name != null) {return "'$this->name'";}
         if ($this->login != null) {return "'$this->login', '$this->password'";}
-        if ($this->question != null) {return "'$this->category_id', '$this->question', '$this->user_id', '$this->status'";}
+        if ($this->question != null) {return "'$this->category_id', '$this->question', '$this->user_id'";}
     }
 
     public function getUpdateQuery()
     {
         if ($this->name != null) {return "`name`='$this->name'";}
         if ($this->login != null) {return "`login`='$this->login',`password`='$this->password'";}
-//        if ($this->question != null) {return "`login`='$this->login',`password`='$this->password'";}
+        if ($this->question != null) {return "`category_id`='$this->category',`question`='$this->question',`answer`='$this->answer',`user_id`='$this->user',`status`='$this->status'";}
     }
 }
