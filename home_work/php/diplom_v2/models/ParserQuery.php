@@ -2,6 +2,7 @@
 
 class ParserQuery
 {
+    public $id;
     public $user;
     public $name;
     public $login;
@@ -14,6 +15,7 @@ class ParserQuery
 
     public function __construct($post)
     {
+        $this->id = $post['id'];
         $this->user = $post['user'];
         $this->name = $post['name'];
         $this->login = $post['login'];
@@ -35,5 +37,12 @@ class ParserQuery
         if ($this->name != null) {return "'$this->name'";}
         if ($this->login != null) {return "'$this->login', '$this->password'";}
         if ($this->question != null) {return "'$this->category_id', '$this->question', '$this->user_id', '$this->status'";}
+    }
+
+    public function getUpdateQuery()
+    {
+        if ($this->name != null) {return "`name`='$this->name'";}
+        if ($this->login != null) {return "`login`='$this->login',`password`='$this->password'";}
+//        if ($this->question != null) {return "`login`='$this->login',`password`='$this->password'";}
     }
 }

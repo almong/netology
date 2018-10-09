@@ -56,12 +56,19 @@ class QueryBuilder
         return $id;
     }
 
-    public function getCol($table, $col)
+    public function getName($table, $id)
     {
-        $query = "SELECT $col FROM `$table`";
+        $query = "SELECT `name` FROM `$table` WHERE `id`=$id";
         $statement = $this->db->prepare($query);
         $statement->execute();
-        return $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $statement->fetch();
+    }
+
+    public function update($table, $updateParam, $id)
+    {
+        $query = "UPDATE `$table` SET $updateParam WHERE `id`='$id'";
+        $statement = $this->db->prepare($query);
+        $statement->execute();
     }
 
 }

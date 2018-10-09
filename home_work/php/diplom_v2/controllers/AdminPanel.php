@@ -25,11 +25,15 @@ $nameClass = $arrLink[0];
 empty($_SERVER['QUERY_STRING']) ?  $action = $arrLink[1] : $action = stristr($arrLink[1], '?', true);
 $table = lcfirst($nameClass);
 $param = parser($queryString);
+$users = $obj->showAll('user');
+$categories = $obj->showAll('category');
+$statuses = $obj->showAll('status');
 
 if (isset($_POST)) {
     $parserPost = new ParserQuery($_POST);
     $data = $parserPost->getData();
     $col = $parserPost->getCol();
+    $queryUpdate = $parserPost->getUpdateQuery();
 }
 
 
@@ -39,6 +43,10 @@ switch ($action){
         break;
     case 'update':
         $editData = $obj->showOne($table, $param['id']);
+        if (!empty($queryUpdate)) {
+            $obj->update($table, $queryUpdate, $parserPost->id);
+            header("Location: /{$nameClass}/showAll");
+        }
         break;
     case 'delete':
         $obj->$action($table, $param['id']);
