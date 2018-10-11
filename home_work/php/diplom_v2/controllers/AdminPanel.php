@@ -38,6 +38,7 @@ if (isset($_POST)) {
     $data = $parserPost->getData();
     $col = $parserPost->getCol();
     $queryUpdate = $parserPost->getUpdateQuery();
+
 }
 
 
@@ -48,6 +49,7 @@ switch ($action){
     case 'update':
         $editData = $obj->showOne($table, $param['id']);
         if (!empty($queryUpdate)) {
+//            var_dump($parserPost->id); die;
             $obj->update($table, $queryUpdate, $parserPost->id);
             header("Location: /{$nameClass}/showAll");
         }

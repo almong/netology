@@ -48,9 +48,9 @@ class ParserQuery
      */
     public function getData()
     {
-        if ($this->name) {return "'$this->name'";}
-        if ($this->login) {return "'$this->login', '$this->password'";}
-        if ($this->question) {return "'$this->category_id', '$this->question', '$this->user_id'";}
+        if ($this->name) {return [$this->name];}
+        if ($this->login) {return [$this->login, $this->password];}
+        if ($this->question) {return [$this->category, $this->question, $this->user, $this->status];}
     }
 
     /**
@@ -58,8 +58,8 @@ class ParserQuery
      */
     public function getUpdateQuery()
     {
-        if ($this->name != null) {return "`name`='$this->name'";}
-        if ($this->login != null) {return "`login`='$this->login',`password`='$this->password'";}
-        if ($this->question != null) {return "`category_id`='$this->category',`question`='$this->question',`answer`='$this->answer',`user_id`='$this->user',`status`='$this->status'";}
+        if ($this->name) {return [$this->name];}
+        if ($this->login) {return [$this->login, $this->password];}
+        if ($this->question) {return [$this->category, $this->question, $this->answer, $this->user, $this->status];}
     }
 }
