@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class ParserQuery
+ */
 class ParserQuery
 {
     public $id;
@@ -12,7 +15,12 @@ class ParserQuery
     public $category;
     public $answer;
 
-    public function __construct($post)
+    /**
+     * ParserQuery constructor.
+     *
+     * @param array $post
+     */
+    public function __construct(array $post)
     {
         $this->id = $post['id'];
         $this->user = $post['user'];
@@ -25,20 +33,29 @@ class ParserQuery
         $this->answer = $post['answer'];
     }
 
+    /**
+     * @return string
+     */
     public function getCol()
     {
-        if ($this->name != null) {return "`name`";}
-        if ($this->login != null) {return "`login`, `password`";}
-        if ($this->question != null) { return "`category_id`, `question`, `user_id`, `status`";}
+        if ($this->name) {return "`name`";}
+        if ($this->login) {return "`login`, `password`";}
+        if ($this->question) { return "`category_id`, `question`, `user_id`, `status`";}
     }
 
+    /**
+     * @return string
+     */
     public function getData()
     {
-        if ($this->name != null) {return "'$this->name'";}
-        if ($this->login != null) {return "'$this->login', '$this->password'";}
-        if ($this->question != null) {return "'$this->category_id', '$this->question', '$this->user_id'";}
+        if ($this->name) {return "'$this->name'";}
+        if ($this->login) {return "'$this->login', '$this->password'";}
+        if ($this->question) {return "'$this->category_id', '$this->question', '$this->user_id'";}
     }
 
+    /**
+     * @return string
+     */
     public function getUpdateQuery()
     {
         if ($this->name != null) {return "`name`='$this->name'";}

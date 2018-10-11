@@ -1,6 +1,7 @@
 <?php
 include '../config/router.php';
-
+$paternID = "/^[0-9]+/";
+$paternAdminPanel = "/Admin|User|Question|Category/";
 $route = $_SERVER['REQUEST_URI'];
 
 if (preg_match($paternAdminPanel, $_SERVER['REQUEST_URI'])) {

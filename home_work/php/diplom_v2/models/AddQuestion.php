@@ -1,17 +1,39 @@
 <?php
 
-function addQuestion($query, $post)
+/**
+ * Class AddQuestion
+ */
+class AddQuestion
 {
+    public $name;
+    public $category_id;
+    public $question;
+    public $db;
 
-    if (empty($query->getId('user', 'name', $post['name'])) ||
-        $query->getId('user', 'name', $post['name']) == null) {
-        $data = "'{$post['name']}'";
-        $query->add('user', '`name`', $data);
+    /**
+     * AddQuestion constructor.
+     *
+     * @param array $post
+     */
+    public function __construct(array $post)
+    {
+        $this->db = new QueryBuilder();
+        $this->name = $post['name'];
+        $this->category_id = $post['category'];
+        $this->question = $post['question'];
     }
 
-    $category_id = $query->getId('category', 'name', $post['category']);
-    $user_id = $query->getId('user', 'name', $post['name']);
-    $data = "'$category_id', '{$post['question']}', '$user_id', 'new'";
-    $col = "`category_id`, `question`, `user_id`, `status`";
-    $query->add('question', $col, $data);
+    public function addNewUser()
+    {
+        $this->db->add('user', 'name', $this->name);
+    }
+
+    public function addNewQuestion()
+    {
+        $this->addNewUser();
+        $user_id = $this->db->getId('user', 'name', $this->name);
+        $data = "'$this->category_id', '$this->question', '$user_id', '1'";
+        $col = "`category_id`, `question`, `user_id`, `status`";
+        $this->db->add('question', $col, $data);
+    }
 }

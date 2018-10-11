@@ -2,8 +2,12 @@
 
 include '../models/ParserQuery.php';
 include "../models/QueryBuilder.php";
-
-function parser($queryString)
+/**
+ * @param string $queryString
+ *
+ * @return array
+ */
+function parser(string $queryString)
 {
     $param = [];
     if ($values = explode('&', $queryString)){

@@ -5,7 +5,8 @@ include '../models/AddQuestion.php';
 $query = new QueryBuilder();
 
 if (!empty($_POST['name'] && !empty($_POST['question']))){
-    addQuestion($query, $_POST);
+    $question = new AddQuestion($_POST);
+    $question->addNewQuestion();
     header('Location: /');
 }
 

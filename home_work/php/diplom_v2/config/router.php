@@ -1,8 +1,5 @@
 <?php
 
-$paternID = "/^[0-9]+/";
-$paternAdminPanel = "/Admin|User|Question|Category/";
-
 $routers = [
     "/" => __DIR__ . '/../controllers/Home.php',
     "/question" => __DIR__ . '/../controllers/AddQuestions.php',
