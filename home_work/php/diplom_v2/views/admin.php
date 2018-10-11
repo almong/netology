@@ -22,11 +22,9 @@ include 'header.php';
         </li>
     </ul>
     <div class="p-2 bd-highlight col">
-        <?php
-            if (isset($nameClass)) {
+        <?php if (isset($nameClass)) :
                 include 'AdminPanel/'.lcfirst($nameClass).'.php';
-            }
-        ?>
+        endif; ?>
     </div>
 </section>
 

@@ -12,10 +12,9 @@ include 'header.php';
         <div class="form-group">
             <label for="exampleFormControlSelect1">Выберите категорию</label>
             <select name="category" class="form-control" id="exampleFormControlSelect1"">
-               <?php
-                foreach ($categorys as $category){?>
+               <?php foreach ($categorys as $category) :?>
                     <option value="<?= $category['id']?>"><?= $category['name']?></option>
-                <?php } ?>
+                <?php endforeach; ?>
             </select>
         </div>
         <div class="form-group">
